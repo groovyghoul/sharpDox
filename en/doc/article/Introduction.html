@@ -1,0 +1,106 @@
+ 
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox</title>
+        <meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/typography.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/elements.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/markdown.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/vs.css" />
+
+		<script src="../js/vendor/jquery.js"></script>
+		<script src="../js/vendor/highlight.pack.js"></script>
+
+		<script src="../js/NavTree.js"></script>
+
+		<script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>        
+        
+		<header id="topbar"> 
+            <div class="container">
+                <a class="logo" href="http://sharpdox.de" target="_blank" title="sharpDox">
+                    <img src="images/logo-small.png" alt="sharpDox" />
+                </a>
+                <div id="breadcrumb">
+					<a href="index.html" title="Start">Start</a>
+				</div>
+            </div>
+        </header>
+
+        <section id="content" class="container">
+            
+			<div id="sidebar">
+				<div id="docname">
+											<a href="index.html" class="pagelink"><img src="logo.png" title="sharpDox"/></a>
+									</div>
+    
+				<div id="navigation-container" data-nav="index">		
+				</div>					
+			</div>
+
+			<div id="documentation">
+				<div id="documentation-wrapper">
+					<div id="header">
+						<h2 class="type-title">Introduction</h2>
+													<span class="namespace-title">Version 0.9.8</span>
+											</div>
+					<div id="pagecontent">
+
+						<h3 class="box-title first-heading">Article</h3>
+						<div class="divider">
+						<span></span>
+						</div>
+
+						<div class="text-box markdown">
+							
+							<p>Building code documentations with <strong>sharpDox</strong> is really easy. Just download it, 
+extract the zip file to any location and start the <em>SharpDox.Core.exe</em>. </p>
+
+<p><img src="images/sdi.en.startSD.png" alt="Shell" /></p>
+
+<p>Developers are able to create additional shells for <strong>sharpDox</strong>. If more than one shell 
+is available in the folder <em>shells</em>, <strong>sharpdox</strong> will ask which one should get started. 
+If you only need one shell please delete the other ones. </p>
+
+<p>To create your first documentation it is suggested to start the GUI of <strong>sharpDox</strong>. 
+The GUI helps you to create a config for your documentation. Exporters are able to provide 
+additional settings which are available from the <em>exportsettings</em> menu.</p>
+
+<p><img src="images/sdi.en.introduction.png" alt="Introduction" /></p>
+
+<p>Developers are able to create different output formats for the code documentation. 
+Besides the chm documentation, which is delivered together with <strong>sharpDox</strong>, there is a 
+xml exporter to export your code documentation as a xml file. You only have to download 
+the exporter and drop it into the <em>plugin</em> folder of <strong>sharpDox</strong>. The new exporter will 
+be registered during a restart of <strong>sharpDox</strong> and gets executed during the build process.</p>
+
+<p>If you provided all needed settings, the documentation is ready to build. Just go to the 
+<em>Build</em> option and press <em>Start</em>. After the successful build your documentation is located 
+in the given output path. <strong>sharpDox</strong> created a subfolder for each registered exporter.</p>
+
+<p>Have fun with <strong>sharpDox</strong>!</p>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+        </section>
+
+    </body>
+</html>
+

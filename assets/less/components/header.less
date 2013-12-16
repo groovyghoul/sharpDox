@@ -1,0 +1,91 @@
+#main-header{
+	padding-bottom:5px;
+    padding-top:10px;
+    background:@sidebarGrey;
+}
+
+#headerNavigation {
+    float: right;
+    margin-top: -10px;
+
+    a {
+        font-size: 12pt;
+        height: 45px;
+        color: black;
+        font-family: 'OpenSansLight';
+        display: block;
+        padding: 25px 20px 0px 20px;
+        background: @sidebarGrey;
+    }
+
+    a:hover {
+        text-decoration: none;
+        background: white;
+        color: @mainOrange;
+    }
+
+    li {
+        float: left;
+    }
+
+    ul {
+        width:150px;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        margin:0;
+        padding:0;
+        border: 1px solid @borderGrey;
+        border-top: none;
+
+        li {
+            float: none;
+
+            a {
+                text-align:center;
+            }
+        }
+    }
+}
+
+#secondary-header{
+	background: #454245;
+	color:white;
+	font-size:0.8em;
+	padding:5px 25px;
+
+	a{
+		font-family:'OpenSansSemibold';		
+		color:white;
+	}
+
+	a:hover{
+		color:@mainOrange;
+	}
+
+	.current{
+		color:@mainOrange;
+	}
+
+	#language-selector{
+		float:right;
+	}
+}
+
+#page-header {
+    background: @mainOrange;
+    padding: 25px 0;
+    -moz-box-shadow: 0px 13px 3px -10px rgba(0, 0, 0, 0.25) inset, 0px -13px 3px -10px rgba(0, 0, 0, 0.25) inset;
+    -webkit-box-shadow: 0px 13px 3px -10px rgba(0, 0, 0, 0.25) inset, 0px -13px 3px -10px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0px 13px 3px -10px rgba(0, 0, 0, 0.25) inset, 0px -13px 3px -10px rgba(0, 0, 0, 0.25) inset;
+
+    .btn {
+        float: right;
+        margin:0;
+    }
+
+    h1 {
+        margin:0;
+        color:black;
+    }
+}

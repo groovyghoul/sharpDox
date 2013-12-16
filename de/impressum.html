@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	
+	<title>sharpDox - Impressum</title>
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />
+	<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../assets/css/slider.css" type="text/css" />
+	
+	<script src="../assets/js/swipe.js"></script>
+	<script>
+		window.onload = function() {
+			new Swipe(document.getElementById('slider'), {
+			  startSlide: 0,
+			  speed: 1000,
+			  auto: 3000,
+			  continuous: true,
+			  disableScroll: false,
+			  stopPropagation: false
+			});
+		}
+	</script>
+</head>
+<body>
+	
+	<div id="wrapper">
+		<div id="secondary-header">
+			<a href="downloads.html"><i class="icon-download-alt"></i> Aktuelle Version 0.9.8 (Dezember 2013)</a>
+			<div style="clear:both;"></div>
+		</div>
+		<header id="main-header">
+			<div class="inner-header container">
+				<a class="logo" href="index.html" title="">
+					<img src="../assets/img/logo.png" alt="" />
+				</a>
+				<ul id="headerNavigation">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="downloads.html">Downloads</a></li>
+					<li><a href="doc/index.html">Dokumentation</a></li>
+					<li><a href="https://github.com/Geaz/sharpDox/issues" target="_blank">Feedback</a></li>
+				</ul>
+			</div>
+		</header>
+	
+		<div id="page-header">			
+			<div class="container">
+				<h1 class="tagline">Impressum</h1> 
+			</div>
+		</div>
+
+		<section id="content" class="container">
+			<div id="impressum">
+				<script type="text/javascript">
+					function UnCryptMailto( s )
+					{
+						var n = 0;
+						var r = "";
+						for( var i = 0; i < s.length; i++)
+						{
+							n = s.charCodeAt( i );
+							if( n >= 8364 )
+							{
+								n = 128;
+							}
+							r += String.fromCharCode( n - 1 );
+						}
+						return r;
+					}
+					function linkTo_UnCryptMailto( s )
+					{
+						location.href=UnCryptMailto( s );
+					}
+				</script>
+				<br/>
+				<em>Angaben gemäß § 5 TMG:</em>
+
+				<p>Christian Gerrit Gazic</p>
+				<p>Am Borsdorfer 58</p>
+				<p>60435 Frankfurt</p>
+
+				Email: <a href="javascript:linkTo_UnCryptMailto('nbjmup;nbjmAhfb{/ef');">mail [äd] geaz [dodd] de</a><br/><br/>
+
+			</div>
+		</section>
+		
+		<div id="push"></div>
+	</div>  
+	
+	<footer id="footer">
+		<div class="container">
+			<a href="impressum.html">Impressum</a>
+		</div>
+	</footer>
+    
+</body>
+</html>

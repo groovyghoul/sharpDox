@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	
+	<title>sharpDox</title>
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />
+	<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../assets/css/slider.css" type="text/css" />
+	
+	<script src="../assets/js/swipe.js"></script>
+	<script>
+		window.onload = function() {
+			new Swipe(document.getElementById('slider'), {
+			  startSlide: 0,
+			  speed: 1000,
+			  auto: 3000,
+			  continuous: true,
+			  disableScroll: false,
+			  stopPropagation: false
+			});
+		}
+	</script>
+</head>
+<body>
+	
+	<div id="wrapper">
+		<div id="secondary-header">
+			<a href="downloads.html"><i class="icon-download-alt"></i> Aktuelle Version 0.9.8 (Dezember 2013)</a>
+			<div style="clear:both;"></div>
+		</div>
+		<header id="main-header">
+			<div class="inner-header container">
+				<a class="logo" href="index.html" title="">
+					<img src="../assets/img/logo.png" alt="" />
+				</a>
+				<ul id="headerNavigation">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="downloads.html">Downloads</a></li>
+					<li><a href="doc/index.html">Dokumentation</a></li>
+					<li><a href="https://github.com/Geaz/sharpDox/issues" target="_blank">Feedback</a></li>
+				</ul>
+			</div>
+		</header>
+	
+		<div id="page-header">
+			<div class="container">			
+				<div id="slider" class='swipe'>
+				  <div class="swipe-wrap">
+					  <div class="swipe-slide">
+						<img src="img/slide1.png" alt="Slide1"/>
+					  </div>
+					  <div class="swipe-slide">
+						<img src="img/slide2.png" alt="Slide2"/>
+					  </div>
+					  <div class="swipe-slide">
+						<img src="img/slide3.png" alt="Slide3"/>
+					  </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<section id="content" class="container">
+			<div class="toolbox-wrapper">
+				<div class="toolbox">
+					<div class="header">
+						<a href="downloads.html" title="downloads">
+							<i class="icon-download-alt icon-5x"></i>
+							<h2>Download</h2>
+						</a>
+						<p>Herunterladen, entpacken und mit Leichtigkeit Code-Dokumentationen bauen.</p>
+					</div>
+					<div class="content">
+						<p>sharpDox ist ein erweiterbares Dokumentationtool für c#. Außer der eigentlichen Code-Dokumentation erstellt sharpDox Klassendiagramme und Sequenzdiagramme. Um anzufangen, muss lediglich die neuste Version von sharpDox heruntergeladen werden. Es wurde versucht, die Anwedung möglichst anwenderfreundlich zu gestalten. Sollte es dennoch nötig sein, befindet sich in der Dokumentation auf dieser Seite eine kleine Anleitung.</p>
+					</div>
+				</div>
+
+				<div class="toolbox">
+					<div class="header">
+						<a href="downloads.html" title="downloads">
+							<i class="icon-cogs icon-5x"></i>
+							<h2>Plugins</h2>
+						</a>
+						<p>Erweitern und Code-Dokumentationen in jedem erdenklichen Format erstellen.</p>
+					</div>
+					<div class="content">
+						<p>sharpDox ist nicht auf die Ausgabe von CHM-Dokumentation beschränkt. sharpDox selbst analysiert das Code-Projekt und übergibt die gewonnenen Informationen den registerierten Plugins. Diese sind in der Lage, diese Informationen in jedes erdenkliche Format zu überführen.</p>
+					</div>
+				</div>
+				</div>
+		</section>
+		
+		<div id="push"></div>
+	</div>  
+	
+	<footer id="footer">
+		<div class="container">
+			<a href="impressum.html">Impressum</a>
+		</div>
+	</footer>
+    
+</body>
+</html>

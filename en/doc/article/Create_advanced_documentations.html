@@ -116,30 +116,30 @@ If there is no custom navigation inside the solution path, <strong>sharpDox</str
 
 <p>You are able to create links inside descirptions and articles to link to other elements within the documention.</p>
 
-<p>Use the placeholder instead of an url (the examples use the markdown syntax):</p>
+<p>Use the placeholder instead of an url (the examples use the markdown syntax - please remove the " in the examples):</p>
 
-<p><strong>Namespace</strong> - namespace/[Fullname].html</p>
+<p><strong>Namespace</strong> - {{"namespace-link:[Fullname]}}</p>
 
 <blockquote>
-  <p><strong>Example:</strong> [LinkText](namespace/43834410-2b98-47c1-a933-d3a988576e19.html)</p>
+  <p><strong>Example:</strong> [LinkText]({{"namespace-link:SharpDox.Sdk}})</p>
 </blockquote>
 
 <p><strong>Type</strong> - type/[Identifier].html</p>
 
 <blockquote>
-  <p><strong>Example:</strong> [LinkText](type/a76ad69e-81e2-4f4e-8239-6820d7e9229f.html)</p>
+  <p><strong>Example:</strong> [LinkText]({{"type-link:SharpDox.Sdk.Templater}}")</p>
 </blockquote>
 
-<p><strong>Article</strong> - article/[ArticleName].html</p>
+<p><strong>Article</strong> - article/[ArticleTitle].html</p>
 
 <blockquote>
-  <p><strong>Example:</strong> [LinkText](article/exporter-tutorial.html)</p>
+  <p><strong>Example:</strong> [LinkText]({{"article-link:Create a exporter}})</p>
 </blockquote>
 
 <p><strong>Image</strong> - You are able to copy images into the solution path to use them within articles and descriptions. Just use the <em>sdi.</em> prefix to mark the image for <strong>sharpDox</strong>.</p>
 
 <blockquote>
-  <p><strong>Example:</strong> ![Shell](images/sdi.startSD.png)</p>
+  <p><strong>Example:</strong> ![Shell]({{"image-link:sdi.startSD.png}})</p>
 </blockquote>
 
 <h2>Navigation</h2>

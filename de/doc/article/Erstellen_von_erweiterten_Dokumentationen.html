@@ -117,30 +117,30 @@
 
 <p>Innerhalb von Beschreibungen und Artikeln können auf verschiedene Elemente innerhalb der Dokumentation verlinkt werden. Außerdem ist es möglich auf Bilder innerhalb der Lösung zu verlinken.</p>
 
-<p>Die Platzhalter werden statt einer URL genutzt (In den Beispielen wird die Markdown-Syntax genutzt):</p>
+<p>Die Platzhalter werden statt einer URL genutzt (In den Beispielen wird die Markdown-Syntax genutzt - bitte das " aus den Beispielen entfernen):</p>
 
-<p><strong>Namensraum</strong> - namespace/[Fullname].html</p>
+<p><strong>Namensraum</strong> - {{"namespace-link:[Fullname]}}</p>
 
 <blockquote>
-  <p><strong>Beispiel:</strong> [LinkText](namespace/43834410-2b98-47c1-a933-d3a988576e19.html)</p>
+  <p><strong>Beispiel:</strong> [LinkText]({{"namespace-link:SharpDox.Sdk}})</p>
 </blockquote>
 
 <p><strong>Typ</strong> - type/[Identifier].html</p>
 
 <blockquote>
-  <p><strong>Beispiel:</strong> [LinkText](type/a76ad69e-81e2-4f4e-8239-6820d7e9229f.html)</p>
+  <p><strong>Beispiel:</strong> [LinkText]({{"type-link:SharpDox.Sdk.Templater}})</p>
 </blockquote>
 
-<p><strong>Artikel</strong> - article/[ArticleName].html</p>
+<p><strong>Artikel</strong> - article/[ArticleTitle].html</p>
 
 <blockquote>
-  <p><strong>Beispiel:</strong> [LinkText](article/exporter-tutorial.html)</p>
+  <p><strong>Beispiel:</strong> [LinkText]({{"article-link:Erstellen eines Exporters}})</p>
 </blockquote>
 
 <p><strong>Bilder</strong> - Innerhalb der Solution können Bilder abgelegt werden die in Beschreibungen und Artikeln genutzt werden können. Die Bilder für die Dokumentation müssen mit dem Prefix <em>sdi.*</em> beginnen.</p>
 
 <blockquote>
-  <p><strong>Beispiel:</strong> ![Shell](images/sdi.startSD.png)</p>
+  <p><strong>Beispiel:</strong> ![Shell]({{"image-link:sdi.startSD.png}})</p>
 </blockquote>
 
 <h2>Navigation</h2>

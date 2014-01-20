@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
  
 
 <!DOCTYPE html>
@@ -10,7 +19,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>sharpDox</title>
         <meta name="viewport" content="width=device-width">
-		<meta name="indexpage" content="true">
 
 		<link rel="stylesheet" type="text/css" href="stylesheets/reset.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/font.css" />
@@ -23,10 +31,14 @@
 
 		<script src="js/vendor/jquery.js"></script>
 		<script src="js/vendor/highlight.pack.js"></script>
-
 		<script src="js/NavTree.js"></script>
+		<script src="js/Parent.js"></script>
 
-		<script>hljs.initHighlightingOnLoad();</script>
+		<script>
+			var backString = "back";
+			var descString = "Description";
+			hljs.initHighlightingOnLoad();
+		</script>
     </head>
     <body>        
         <header id="topbar"> 
@@ -34,9 +46,6 @@
                 <a class="logo" href="http://sharpdox.de" target="_blank" title="sharpDox">
                     <img src="images/logo-small.png" alt="sharpDox" />
                 </a>
-                <div id="breadcrumb">
-					<a href="index.html" title="Start">Start</a>
-				</div>
             </div>
         </header>
 
@@ -44,41 +53,359 @@
             
 			<div id="sidebar">
 				<div id="docname">
-											<a href="index.html" class="pagelink"><img src="logo.png" title="sharpDox"/></a>
-									</div>
+					
+						<a href="index.html" class="pagelink"><img src="logo.png" title="sharpDox"/></a>
+					
+				</div>
     
-				<div id="navigation-container" data-nav="index">		
+				<div id="navigation-container">
+					<ul id="navigation">
+					</ul>
 				</div>				
 			</div>
 
 			<div id="documentation">
-				<div id="documentation-wrapper">
-					<div id="header">
-						<h2 class="type-title">by Gerrit "Geaz" Gazic</h2>
-													<span class="namespace-title">Version 0.9.8.1</span>
-											</div>
-					<div id="pagecontent">
-					
-						<h3 class="box-title first-heading">Description</h3>
-						<div class="divider">
-						<span></span>
-						</div>
 
-						<div class="text-box markdown">
-															<h2>Create documentations with ease</h2>
+				<iframe id="docFrame" frameborder="0" width="100%" src="article/home.html"></iframe>
 
-<p><strong>sharpDox</strong> is a documentation tool to create c# code documentations of any type.
-The tool creates a model of a given c# solution and passes it to the registered export plugins.
-The plugins transform the model to a defined output. <strong>sharpDox</strong> comes with a chm &amp; html export plugin which
-demonstrate the possibilities of the tool.</p>
-
-													</div>
-
-					</div>
-				</div>
 			</div>
 
         </section>
+
+		<div id="navdata" style="display:none;">
+			[{"title":"Navigation", "children":[
+
+
+						
+				{"type":"link", "title":"Introduction", "children":[
+
+
+
+
+
+
+
+
+
+
+]}
+			 , 
+				
+				{"type":"placeholder", "title":"Users", "children":[
+
+
+
+
+
+
+
+
+
+					
+			{"type":"link", "title":"Create advanced documentations", "children":[
+
+
+
+
+
+
+
+
+
+
+]}
+		 , 
+					
+			{"type":"link", "title":"Create multilanguage documentations", "children":[
+
+
+
+
+
+
+
+
+
+
+]}
+		
+
+]}
+			 , 
+				
+				{"type":"placeholder", "title":"Developers", "children":[
+
+
+
+
+
+
+
+
+
+					
+			{"type":"link", "title":"Create a exporter", "children":[
+
+
+
+
+
+
+
+
+
+
+]}
+		 , 		
+									
+			{"type":"api", "title":"API", "children":[
+
+
+
+
+
+
+
+ 
+
+	
+	{"type":"namespaceLink", "title":"SharpDox.Model.CallTree", "guid":"daabc7f7-b674-4961-adb3-d78489051ac5", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"SDConditionalBlock", "guid":"c6ec363b-4cfc-4d15-8fe3-6d244fd798fd"}
+ , 
+		{"type":"typeLink", "title":"SDBlock", "guid":"251e899a-65aa-4071-9935-a4231d258b37"}
+ , 
+		{"type":"typeLink", "title":"SDNode", "guid":"e4e68d44-2023-4841-9975-5964613f9e7b"}
+ , 
+		{"type":"typeLink", "title":"SDNodeRole", "guid":"72caad22-e0b4-42b3-b8c6-846796c64800"}
+ , 
+		{"type":"typeLink", "title":"SDTargetNode", "guid":"e11e0966-d2ba-497c-bee0-34ed3330dc46"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Model.Documentation", "guid":"f6e82ca4-5483-4294-82a3-838d65a77c0d", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"SDArticle", "guid":"5ff28608-bdde-44fe-820c-1f616580135d"}
+ , 
+		{"type":"typeLink", "title":"SDDocumentation", "guid":"c63f155c-6aca-4af7-86fa-c4db4fdc1b8e"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Model.Documentation.Token", "guid":"dfcb82d9-2ebb-4d93-b1d7-08f0be2ab4b8", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"SDCodeToken", "guid":"8eefa728-1a55-4d6d-8fea-97b10fc49e73"}
+ , 
+		{"type":"typeLink", "title":"SDToken", "guid":"b91c4909-97bb-4d6f-898b-e4dcd101b5e9"}
+ , 
+		{"type":"typeLink", "title":"SDTokenList", "guid":"92ee9a22-26a7-410a-96f5-10c38cab36c2"}
+ , 
+		{"type":"typeLink", "title":"SDTokenRole", "guid":"03f6be87-d8b9-420e-b2a5-43427c1b729b"}
+ , 
+		{"type":"typeLink", "title":"SDSeeToken", "guid":"8c3fd45a-c561-497f-b259-3dea4b69e62e"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Model.Repository.Members", "guid":"7bef6cf6-46b1-4abf-a84e-dfa587857a32", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"SDEvent", "guid":"8155b3ee-fd44-43db-923f-aceca35b011a"}
+ , 
+		{"type":"typeLink", "title":"SDField", "guid":"399d0777-e3d4-4e99-8c3d-466d47bd38f0"}
+ , 
+		{"type":"typeLink", "title":"SDMember", "guid":"161d4e1f-2faa-41d7-8a33-dc5a00ae0022"}
+ , 
+		{"type":"typeLink", "title":"SDMethod", "guid":"2159afbd-87e9-4311-9402-f8796258008c"}
+ , 
+		{"type":"typeLink", "title":"SDParameter", "guid":"9d9cb3ba-de28-4373-8a67-86f53aa408b6"}
+ , 
+		{"type":"typeLink", "title":"SDProperty", "guid":"d6b9c2de-942f-446b-85cb-30bc810c2493"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Model.Repository", "guid":"bcaed19d-3751-4150-8616-87b467601993", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"SDNamespace", "guid":"fbc747ce-4628-49e3-9690-f9429be3a032"}
+ , 
+		{"type":"typeLink", "title":"SDProjectInfo", "guid":"1dfe8c94-c79f-427f-8bec-d79aa50968d3"}
+ , 
+		{"type":"typeLink", "title":"SDRegion", "guid":"845e2395-da32-4f75-9a9b-be79700ad0b4"}
+ , 
+		{"type":"typeLink", "title":"SDRepository", "guid":"e92eb475-159d-427f-b17f-adec74952653"}
+ , 
+		{"type":"typeLink", "title":"SDType", "guid":"2bc70800-6d7c-4e43-9dec-60b560936303"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.UML", "guid":"e935ca3a-2746-4612-a314-b15e7d9e2010", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"ISDDiagram", "guid":"868620bd-4c1f-40d8-a9b2-9525f9a96687"}
+ , 
+		{"type":"typeLink", "title":"DiagramExtensions", "guid":"b6b15278-1329-4cb8-acd3-f63e4a1300b3"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Sdk.Build", "guid":"29cdb981-4704-4f73-89e6-608dd3a14f39", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"IBuildController", "guid":"20ccd51b-c265-4f6f-a94f-d38d164cfa9c"}
+ , 
+		{"type":"typeLink", "title":"IBuildMessenger", "guid":"22beaaaf-0e65-4b36-97ab-b29a56221430"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Sdk.Config", "guid":"0d525603-ccab-40cd-8ad6-29352fda7163", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"IConfigController", "guid":"68ebdcd8-86cc-4a34-b121-b601bb14c190"}
+ , 
+		{"type":"typeLink", "title":"IConfigSection", "guid":"9f504888-5859-4e7a-bb7a-071144d10bdd"}
+ , 
+		{"type":"typeLink", "title":"SharpDoxConfig", "guid":"5ccfdd97-94f9-4e6a-99a7-3ef7c7fc891a"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Sdk.Exporter", "guid":"9170fe67-b2ed-4598-92dd-292271eb2a07", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"IExporter", "guid":"ef388eb8-d993-4848-b44a-a5ede03e9efe"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Sdk.Local", "guid":"e0a7ea6a-b1e1-44e7-b909-53196ad20788", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"ILocalStrings", "guid":"26f5c6ab-c7ad-4f94-966c-9f66750ed6ac"}
+ , 
+		{"type":"typeLink", "title":"SharpDoxStrings", "guid":"9a586d09-7c99-489a-82f3-81f40e0fde4a"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Sdk", "guid":"40c132f3-9ea4-4ed7-ab5a-eb7f69069e99", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"Templater", "guid":"f7e24a4a-9abb-448f-90b8-83afd0b883f3"}
+
+
+]}
+ , 	
+	{"type":"namespaceLink", "title":"SharpDox.Sdk.UI", "guid":"c0c4759c-2b28-4468-8163-8ff1756ed174", "children":[
+
+
+
+
+
+
+
+
+
+		{"type":"typeLink", "title":"IPage", "guid":"92c49a44-156e-451e-a15b-b4a7bc888edf"}
+ , 
+		{"type":"typeLink", "title":"IShell", "guid":"a46aa71d-67d2-41ea-aef7-3a9b7bbbff7c"}
+
+
+]}
+
+
+]}
+		
+
+]}
+			
+
+]}]
+		</div>
 
     </body>
 </html>

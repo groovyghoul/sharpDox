@@ -1,0 +1,748 @@
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SDNodeRole</title>
+        <meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/typography.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/elements.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/markdown.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/vs.css" />
+
+		<script src="../js/vendor/jquery.js"></script>
+		<script src="../js/vendor/jquery.mousewheel.js"></script>
+		<script src="../js/vendor/jquery.panzoom.min.js"></script>
+		<script src="../js/vendor/jquery.hashchange.min.js"></script>
+		<script src="../js/vendor/highlight.pack.js"></script>
+
+		<script src="../js/SVGPan.js"></script>
+		<script src="../js/MemberNav.js"></script>
+
+		<script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>        
+        
+		<div id="documentation-wrapper">
+
+			
+				<div id="sd-class-diagram">
+					
+					<svg height="275.50" width="161.00"><g transform=""><rect height="271" width="160" x="0.55" y="0.55" fill="#FFFFFF" stroke="#979797" stroke-width="1" /><text x="32.13" y="20.50" fill="" style="" text-anchor="" font-family="" font-size="11.00" onmouseover="" onmouseout=""><![CDATA[public static class]]></text><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html" xmlns:xlink="xlink"><text x="37.27" y="40.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[SDNodeRole]]></text></a><path d="M0.5,55.50L161.00,55.50" stroke="#979797" stroke-width="1" /><image width="16.00" height="16.00" x="15.00" y="68.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#d842456d-df5e-4390-a81e-a18831e82efd" xmlns:xlink="xlink"><text x="40.00" y="80.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Case]]></text></a><image width="16.00" height="16.00" x="15.00" y="93.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#582db483-3fb6-4e48-9df6-633b88440179" xmlns:xlink="xlink"><text x="40.00" y="105.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Conditional]]></text></a><image width="16.00" height="16.00" x="15.00" y="118.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#02795a25-9f30-4f48-87c4-1dde95d05f08" xmlns:xlink="xlink"><text x="40.00" y="130.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[DoWhileLoop]]></text></a><image width="16.00" height="16.00" x="15.00" y="143.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#56612698-afa6-4cf6-a65d-4b94ce9802e7" xmlns:xlink="xlink"><text x="40.00" y="155.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[ForEach]]></text></a><image width="16.00" height="16.00" x="15.00" y="168.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#e7f33dda-f2d4-4ae0-aa8b-5550aeb6312f" xmlns:xlink="xlink"><text x="40.00" y="180.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[ForLoop]]></text></a><image width="16.00" height="16.00" x="15.00" y="193.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#887dddea-3c3f-4b8b-8034-27b7e843a8e2" xmlns:xlink="xlink"><text x="40.00" y="205.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Switch]]></text></a><image width="16.00" height="16.00" x="15.00" y="218.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#11ba00a5-90d2-4edf-ba65-d1c2cf16886d" xmlns:xlink="xlink"><text x="40.00" y="230.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Target]]></text></a><image width="16.00" height="16.00" x="15.00" y="243.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIdQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFevfLTpr9b8NWO1+vv9XJvYvsvlv9jvWprXtcThwtnwxdvxrL3e////zYeNhAAAAAF0Uk5TAEDm2GYAAAABYktHRCy63XGrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAY0lEQVQY042PRw6AIBREsTfsFT/2rve/n7qQgCtm914mmQxC0lFUTWDdMC2bY8f1sG8FjMMoxjhJMybyosQVqYEJ2pCWdMAJ2g8jAEyfmCl9EBbWWLdX7NzssYmM0AmX/Ktfbim3BoCVQkjeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUyOjM3KzAyOjAww0o2dwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#07cf25e0-4cf0-4538-828c-f4f60c4115a7" xmlns:xlink="xlink"><text x="40.00" y="255.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[WhileLoop]]></text></a></g></svg>
+				</div>
+			
+
+			<div id="typeIndex" class="typesite">
+				<div id="header">
+					<h2 class="type-title">SDNodeRole</h2>
+					<span class="namespace-title">Namespace: SharpDox.Model.CallTree</span>
+				</div>
+
+				<div id="pagecontent">
+
+					<h3 class="box-title first-heading">Syntax</h3>
+					<div class="divider">
+						<span></span>
+					</div>
+					<div class="syntax-box">
+						<pre class="wrap-pre"><code>public static class SDNodeRole</code></pre>
+					</div>
+
+					
+
+					
+        
+					
+
+						
+							<h3 class="box-title">Summary</h3>
+							<div class="doc-box markdown">
+								<p>All roles for the calltree nodes.</p>
+
+							</div>
+						
+
+						
+
+						
+
+						
+
+						
+
+						
+
+						
+
+					
+
+					
+
+					
+
+					<h3 class="box-title">Members</h3>
+					<div class="table-box">
+						<table>
+							<thead>
+								<tr>
+									<td></td>
+									<td>Name</td>
+									<td>Summary</td>
+								</tr>
+							</thead>
+							<tbody>			
+
+								
+
+									<tr >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="Case" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#d842456d-df5e-4390-a81e-a18831e82efd">Case</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a Case-Block.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr  class="even" >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="Conditional" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#582db483-3fb6-4e48-9df6-633b88440179">Conditional</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a Conditional-Block.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="DoWhileLoop" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#02795a25-9f30-4f48-87c4-1dde95d05f08">DoWhileLoop</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a Do-While-Loop.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr  class="even" >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="ForEach" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#56612698-afa6-4cf6-a65d-4b94ce9802e7">ForEach</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a For-Each-Loop.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="ForLoop" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#e7f33dda-f2d4-4ae0-aa8b-5550aeb6312f">ForLoop</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a For-Loop.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr  class="even" >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="Switch" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#887dddea-3c3f-4b8b-8034-27b7e843a8e2">Switch</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a Switch-Block.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="Target" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#11ba00a5-90d2-4edf-ba65-d1c2cf16886d">Target</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a methodcall.</p>
+
+											
+										</td>
+									</tr>
+								
+
+									<tr  class="even" >
+										<td class="iconColumn">
+											<img alt="Field-Icon" src="../images/icons/Field_public.png">
+										</td>
+										<td>
+											<a title="WhileLoop" href="../type/6ccf7b40-d7df-48ad-9681-7baa369667c9.html#07cf25e0-4cf0-4538-828c-f4f60c4115a7">WhileLoop</a>
+										</td>	
+										<td class="markdown">
+											
+												<p>Represents a While-Loop.</p>
+
+											
+										</td>
+									</tr>
+								
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="d842456d-df5e-4390-a81e-a18831e82efd" class="typesite">
+	<div id="header">
+		<h2 class="type-title">Case</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String Case</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a Case-Block.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="582db483-3fb6-4e48-9df6-633b88440179" class="typesite">
+	<div id="header">
+		<h2 class="type-title">Conditional</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String Conditional</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a Conditional-Block.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="02795a25-9f30-4f48-87c4-1dde95d05f08" class="typesite">
+	<div id="header">
+		<h2 class="type-title">DoWhileLoop</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String DoWhileLoop</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a Do-While-Loop.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="56612698-afa6-4cf6-a65d-4b94ce9802e7" class="typesite">
+	<div id="header">
+		<h2 class="type-title">ForEach</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String ForEach</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a For-Each-Loop.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="e7f33dda-f2d4-4ae0-aa8b-5550aeb6312f" class="typesite">
+	<div id="header">
+		<h2 class="type-title">ForLoop</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String ForLoop</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a For-Loop.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="887dddea-3c3f-4b8b-8034-27b7e843a8e2" class="typesite">
+	<div id="header">
+		<h2 class="type-title">Switch</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String Switch</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a Switch-Block.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="11ba00a5-90d2-4edf-ba65-d1c2cf16886d" class="typesite">
+	<div id="header">
+		<h2 class="type-title">Target</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String Target</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a methodcall.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+					
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<div id="07cf25e0-4cf0-4538-828c-f4f60c4115a7" class="typesite">
+	<div id="header">
+		<h2 class="type-title">WhileLoop</h2>
+		<span class="namespace-title">Declaringtype: SharpDox.Model.CallTree.SDNodeRole</span>
+	</div>
+
+	<div id="pagecontent">
+
+		<h3 class="box-title first-heading">Syntax</h3>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public String WhileLoop</code></pre>
+		</div>
+        
+		
+
+			
+				<h3 class="box-title">Summary</h3>
+				<div class="doc-box markdown">
+					<p>Represents a While-Loop.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+			
+
+		</div>
+
+		<div style="clear:both;"></div>
+
+    </body>
+</html>
+

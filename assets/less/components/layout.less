@@ -7,19 +7,19 @@ body {
     height:100%;
 }
 
-#language-wrapper{
-	background: @sidebarGrey;
+.floatRight{
+	float:right;
 }
 
-#language-header{
-	width:200px;
-	margin:auto;
-	padding-top:250px;
+.container{
+	padding: 0;
+	width: 940px;
+	margin: auto;
 }
 
-#language-content{
-	width:120px;
-	margin:auto;
+.postContainer{
+	float:left;
+	width:500px;
 }
 
 #wrapper {
@@ -30,9 +30,7 @@ body {
 }
 
 #content{
-	margin-top:25px;
-    margin-bottom:25px;
-	padding: 15px;
+	padding: 15px 0;
 }
 
 #push {
@@ -49,13 +47,8 @@ body {
 	font-size:0.7em;
 }
 
-.container{
-	width: 1200px;
-	margin: auto;
-}
-
 .toolbox{
-	width:47%;
+	width:45%;
 	float:left;
 	text-align:center;
 	margin:15px;
@@ -68,6 +61,7 @@ body {
 #downloads {
     width:650px;
     margin:auto;
+	margin-top:25px;
 }
 
 .pluginDownloadBox,
@@ -107,20 +101,56 @@ body {
 	text-align:center;
 }
 
+.news-wrapper{
+	margin-right:44%;
+	margin-top:15px;
+}
+
+.news{
+	
+	header{
+		font-family: OpenSansLight;
+		font-size: 1.5em;
+	}
+	
+	border-bottom:1px solid @borderGrey;
+}
+
+.twitter-widget{
+	width:40%;
+	float:right;
+	margin-right:20px;
+}
+
 .btn-primary,
-.btn {
+.btn,
+.btn-borderless {
     background: white;
-    padding: 5px;
+    padding: 10px;
     color: @fontColor!important;
     font-family: 'OpenSansSemibold';
     display:inline-block;
-    margin-bottom:5px;
     border:none;
     text-align:center;
     border:1px solid @borderGrey;
 }
 
-.btn:hover {
+.btn-borderless {
+	border:none;
+}
+
+.btn-blue{
+	background: #3072B3;
+	color: white!important;
+}
+
+.btn-green{
+	background: #91C847;
+	color: white!important;
+}
+
+.btn:hover,
+.btn-borderless:hover {
     text-decoration:none;
     color:@mainOrange!important;
 }

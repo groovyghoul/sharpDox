@@ -1,108 +1,33 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-	<meta charset="utf-8" />
-	
-	<title>sharpDox</title>
-	
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />
-	<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="../assets/css/slider.css" type="text/css" />
-	
-	<script src="../assets/js/swipe.js"></script>
-	<script>
-		window.onload = function() {
-			new Swipe(document.getElementById('slider'), {
-			  startSlide: 0,
-			  speed: 1000,
-			  auto: 3000,
-			  continuous: true,
-			  disableScroll: false,
-			  stopPropagation: false
-			});
-		}
-	</script>
-</head>
-<body>
-	
-	<div id="wrapper">
-		<div id="secondary-header">
-			<div id="language-selector">
-				<a href="https://github.com/Geaz/sharpDox" title="GitHub"><i class="icon-github-sign"></i> Fork me on Github</a>
-			</div>
-			<a href="downloads.html"><i class="icon-download-alt"></i> Current Version 0.9.8.2 (January 2014)</a>
-			<div style="clear:both;"></div>
-		</div>
-		<header id="main-header">
-			<div class="inner-header container">
-				<a class="logo" href="index.html" title="">
-					<img src="../assets/img/logo.png" alt="" />
-				</a>
-				<ul id="headerNavigation">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="downloads.html">Downloads</a></li>
-					<li><a href="doc/index.html">Documentation</a></li>
-					<li><a href="https://github.com/Geaz/sharpDox/issues" target="_blank">Feedback</a></li>
-				</ul>
-			</div>
-		</header>
-	
-		<div id="page-header">
-			<div class="container">			
-				<div id="slider" class='swipe'>
-				  <div class="swipe-wrap">
-					  <div class="swipe-slide">
-						<img src="img/slide1.png" alt="Slide1"/>
-					  </div>
-					  <div class="swipe-slide">
-						<img src="img/slide2.png" alt="Slide2"/>
-					  </div>
-					  <div class="swipe-slide">
-						<img src="img/slide3.png" alt="Slide3"/>
-					  </div>
-				  </div>
-				</div>
-			</div>
-		</div>
+---
+layout: slider
+title: Home
+lang: en
+---
 
-		<section id="content" class="container">
-			<div class="toolbox-wrapper">
-				<div class="toolbox">
-					<div class="header">
-						<a href="downloads.html" title="downloads">
-							<i class="icon-download-alt icon-5x"></i>
-							<h2>Download</h2>
-						</a>
-						<p>Download the latest version to start building code documentation with ease.</p>
-					</div>
-					<div class="content">
-						<p>sharpDox is an extendable code documentation builder for c#. Besides the normal code documentation it creates class diagrams, sequence diagrams and advanced documentation with articles and namespace descriptions! To get started, download the latest version of sharpDox. sharpDox was designed with usability in mind.</p>
-					</div>
-				</div>
-
-				<div class="toolbox">
-					<div class="header">
-						<a href="downloads.html" title="downloads">
-							<i class="icon-cogs icon-5x"></i>
-							<h2>Plugins</h2>
-						</a>
-						<p>Extend sharpDox with plugins to build code documentation in any format.</p>
-					</div>
-					<div class="content">
-						<p>sharpDox isn't limited to the chm format to create documentation. sharpDox just parses the project solution and passes the information to all registered exporters which are able to form this input into any imaginable output.</p>
-					</div>
-				</div>
-				</div>
-		</section>
-		
-		<div id="push"></div>
-	</div>  
-	
-	<footer id="footer">
-		<div class="container">
-			By Gerrit Gazic
+<div class="toolbox-wrapper">
+	<div class="toolbox">
+		<div class="header">
+			<a href="/en/downloads.html" title="downloads">
+				<i class="icon-download-alt icon-5x"></i>
+				<h2>Download</h2>
+			</a>
+			<p>Download the latest version to start building code documentation with ease.</p>
 		</div>
-	</footer>
-    
-</body>
-</html>
+		<div class="content">
+			<p>sharpDox is an extendable code documentation builder for c#. Besides the normal code documentation it creates class diagrams, sequence diagrams and advanced documentation with articles and namespace descriptions! To get started, download the latest version of sharpDox. sharpDox was designed with usability in mind.</p>
+		</div>
+	</div>
+
+	<div class="toolbox">
+		<div class="header">
+			<a href="/en/downloads.html" title="downloads">
+				<i class="icon-cogs icon-5x"></i>
+				<h2>Plugins</h2>
+			</a>
+			<p>Extend sharpDox with plugins to build code documentation in any format.</p>
+		</div>
+		<div class="content">
+			<p>sharpDox isn't limited to the chm format to create documentation. sharpDox just parses the project solution and passes the information to all registered exporters which are able to form this input into any imaginable output.</p>
+		</div>
+	</div>
+</div>

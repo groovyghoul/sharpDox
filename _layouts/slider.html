@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>{{site.name}} - {{page.title}}</title>
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/assets/js/unslide.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.slider').unslider({
+				delay: 5000,
+				keys: true,
+				dots: true,
+				fluid: true				
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		{% if page.lang == 'de' %}
+			{% include header.html %}
+		{% elsif page.lang == 'en' %}
+			{% include en.header.html %}
+		{% endif %}
+		
+		<div id="pageHeader">
+			<div class="container pageHeaderInner">	
+				{% include buttonpanel.html %}
+				<div class="slider">
+					<ul>
+						{% if page.lang == 'de' %}
+							<li><img src="/assets/img/slide1.png" alt="Slide1"/></li>
+							<li><img src="/assets/img/slide2.png" alt="Slide2"/></li>
+						{% elsif page.lang == 'en' %}
+							<li><img src="/assets/img/slide1en.png" alt="Slide1"/></li>
+							<li><img src="/assets/img/slide2en.png" alt="Slide2"/></li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<section id="content" class="container">
+		{{content}}
+		</section>	
+		
+		<div id="push"></div>
+	</div> 
+	{% if page.lang == 'de' %}
+		{% include footer.html %}
+	{% elsif page.lang == 'en' %}
+		{% include en.footer.html %}
+	{% endif %}
+</body>
+</html>

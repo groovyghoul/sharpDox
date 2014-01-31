@@ -1,59 +1,9 @@
-#main-header{
-	padding-bottom:5px;
-    padding-top:10px;
-    background:@sidebarGrey;
-}
-
-#headerNavigation {
-    float: right;
-    margin-top: -10px;
-
-    a {
-        font-size: 12pt;
-        height: 45px;
-        color: black;
-        font-family: 'OpenSansLight';
-        display: block;
-        padding: 25px 20px 0px 20px;
-        background: @sidebarGrey;
-    }
-
-    a:hover {
-        text-decoration: none;
-        background: white;
-        color: @mainOrange;
-    }
-
-    li {
-        float: left;
-    }
-
-    ul {
-        width:150px;
-        display: none;
-        position: absolute;
-        z-index: 9999;
-        margin:0;
-        padding:0;
-        border: 1px solid @borderGrey;
-        border-top: none;
-
-        li {
-            float: none;
-
-            a {
-                text-align:center;
-            }
-        }
-    }
-}
-
-#secondary-header{
+#siteHeader{	
 	background: #454245;
 	color:white;
 	font-size:0.8em;
-	padding:5px 25px;
-
+	padding: 5px 0;
+	
 	a{
 		font-family:'OpenSansSemibold';		
 		color:white;
@@ -62,30 +12,81 @@
 	a:hover{
 		color:@mainOrange;
 	}
-
-	.current{
-		color:@mainOrange;
-	}
-
-	#language-selector{
-		float:right;
+	
+	.languageItem img{
+		width:20px;
+		float:left;
+		margin-right:10px;
 	}
 }
 
-#page-header {
-    background: @mainOrange;
-    padding: 25px 0;
-    -moz-box-shadow: 0px 13px 3px -10px rgba(0, 0, 0, 0.25) inset, 0px -13px 3px -10px rgba(0, 0, 0, 0.25) inset;
-    -webkit-box-shadow: 0px 13px 3px -10px rgba(0, 0, 0, 0.25) inset, 0px -13px 3px -10px rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0px 13px 3px -10px rgba(0, 0, 0, 0.25) inset, 0px -13px 3px -10px rgba(0, 0, 0, 0.25) inset;
+#mainHeader{
+    background:@sidebarGrey;
+	
+	#logo{
+		float:left;
+		padding-top: 17px;
+	}
 
-    .btn {
-        float: right;
-        margin:0;
-    }
+	nav ul {
+		a {
+			font-size: 12pt;
+			height: 45px;
+			color: black;
+			font-family: 'OpenSansLight';
+			display: block;
+			padding: 25px 20px 0px 20px;
+			background: @sidebarGrey;
+		}
+
+		a:hover {
+			text-decoration: none;
+			background: white;
+			color: @mainOrange;
+		}
+
+		li {
+			float: left;
+		}
+
+		ul {
+			width:150px;
+			display: none;
+			position: absolute;
+			z-index: 9999;
+			margin:0;
+			padding:0;
+			border: 1px solid @borderGrey;
+			border-top: none;
+
+			li {
+				float: none;
+
+				a {
+					text-align:center;
+				}
+			}
+		}
+	}
+}
+
+#pageHeader {
+    background: @mainOrange;
 
     h1 {
         margin:0;
         color:black;
     }
+	
+	.pageHeaderInner{
+		padding:20px 0;
+		position:relative;
+	}
+	
+	.buttonpanel{
+		top: 0;
+		position: absolute;
+		right: 20px;
+		z-index: 999;
+	}
 }

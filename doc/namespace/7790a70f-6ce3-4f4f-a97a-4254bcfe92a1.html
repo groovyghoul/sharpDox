@@ -1,0 +1,156 @@
+
+
+
+
+
+
+
+
+
+ 
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SharpDox.Sdk.Local</title>
+        <meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/typography.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/elements.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/markdown.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/vs.css" />
+
+		<script src="../js/vendor/jquery.js"></script>
+		<script src="../js/vendor/highlight.pack.js"></script>
+		<script src="../js/Iframe.js"></script>
+
+		<script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>        
+       
+	   <div id="documentation-wrapper">
+			<div id="header">
+				<h2 class="type-title">SharpDox.Sdk.Local</h2>
+				<span class="namespace-title">Assembly: SharpDox.Sdk</span>
+			</div>
+			<div id="pagecontent">
+					
+				
+					<h3 class="box-title first-heading">Beschreibung</h3>
+					<div class="divider">
+					<span></span>
+					</div>
+					<div class="text-box markdown">
+						
+
+						<p>Der Local-Namensraum beinhaltet die Interfaces, um eigene <em>Strings</em> für <strong>sharpDox</strong> zu erstellen. 
+Die Standardsprache in <strong>sharpDox</strong> ist Englisch.</p>
+
+<p>Beim Start von <strong>sharpDox</strong> wird für jede registrierte Sprachdatei eine Datei im <em>lang/defaults</em> Ordner angelegt.
+Zum Beispiel die Datei <em>en.SharpDox.sdlang</em>, die alle <em>Strings</em> beinhaltet die im Core von <strong>sharpDox</strong> verwendet werden.
+Falls diese <em>Strings</em> zum Beispiel in das Spanische übersetzt werden sollen, genügt es eine Kopie der Datei in den Ordner <em>lang</em> abzulegen. Diese Datei
+muss daraufhin in <em>es.SharpDox.sdlang</em> umbenannt werden. Jede neue Übersetzung muss mit dem zweistelligen ISO-Code der jeweiligen Sprache beginnen.
+Die <em>Strings</em> in dieser Datei können jetzt in das Spanische übersetzt werden.</p>
+
+<p>Falls die Systemsprache des Hosts auf Spanisch gesetzt ist, wird <strong>sharpDox</strong> für die Übersetzung alle <em>es.*</em> Dateien nehmen, um eine entsprechende Übersetzung anzuzeigen.
+Falls keine Übersetzung vorhanden ist, werden die ursprünglichen <em>Strings</em> genutzt.</p>
+
+<p>Hier ein Beispiel, wie eine Sprachdatei mit einem <em>String</em> implementiert werden kann:</p>
+
+<pre><code>using SharpDox.Sdk.Local;
+
+namespace ExampleExporter
+{
+    public class ExampleStrings : ILocalStrings
+    {
+        private string _exampleString = "English String";
+
+        public string ExampleString
+        {
+            get { return _exampleString; }
+            set { _exampleString = value; }
+        }
+
+        public string DisplayName { get { return "ExampleExporter"; } }
+    }
+}
+</code></pre>
+
+<p>Die Benutzung dieser <em>Strings</em> gestaltet sich analog zu der Benutzung von konfigurationssektionen. Siehe <a href="../namespace/cb1d044c-cd33-4c62-a8d8-6cc50081ee95.html">SharpDox.Sdk.Config</a> die beschreibung.</p>
+
+					</div>
+					<h3 class="box-title">Typen</h3>
+
+				
+
+				<div class="table-box">
+					<table>
+						<thead>
+							<tr>
+								<td></td>
+								<td>Name</td>
+								<td>Description</td>
+							</tr>
+						</thead>
+						<tbody>			
+
+							
+
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../images/icons/Class_public.png">
+									</td>
+									<td>
+										<a title="ILocalStrings" href="../type/0e5610de-a4fa-4548-85fd-4579f75090bf.html">ILocalStrings</a>
+									</td>	
+									<td class="markdown">
+										
+											<p>Jedes Plugin, das lokalisierte Strings nutzen
+möchte, muss dieses Interface implementieren.</p>
+
+										
+									</td>
+								</tr>
+
+							
+
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../images/icons/Class_public.png">
+									</td>
+									<td>
+										<a title="SharpDoxStrings" href="../type/2d7c54f7-5763-41a2-8d0c-a05e7d3be2a8.html">SharpDoxStrings</a>
+									</td>	
+									<td class="markdown">
+										
+											<p>Alle Zeichenketten die von der Haupt-Anwendung genutzt werden.</p>
+
+										
+									</td>
+								</tr>
+
+							
+
+						</tbody>
+					</table>
+				</div>
+
+				
+
+				
+
+			</div>
+		</div>
+	   
+    </body>
+</html>
+

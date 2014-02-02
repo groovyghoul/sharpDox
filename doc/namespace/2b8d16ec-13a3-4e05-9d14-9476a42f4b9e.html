@@ -1,0 +1,139 @@
+
+
+
+
+
+
+
+
+
+ 
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SharpDox.Sdk.Exporter</title>
+        <meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/typography.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/elements.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/markdown.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/vs.css" />
+
+		<script src="../js/vendor/jquery.js"></script>
+		<script src="../js/vendor/highlight.pack.js"></script>
+		<script src="../js/Iframe.js"></script>
+
+		<script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>        
+       
+	   <div id="documentation-wrapper">
+			<div id="header">
+				<h2 class="type-title">SharpDox.Sdk.Exporter</h2>
+				<span class="namespace-title">Assembly: SharpDox.Sdk</span>
+			</div>
+			<div id="pagecontent">
+					
+				
+					<h3 class="box-title first-heading">Beschreibung</h3>
+					<div class="divider">
+					<span></span>
+					</div>
+					<div class="text-box markdown">
+						
+
+						<p>Der Exporter-Namensraum beinhaltet alle Interfaces um einen eigenen Exporter zu erstellen. Hier ein kleines Beispiel für den Aufbau eines Exporters:</p>
+
+<pre><code>using System;
+using SharpDox.Model.Repository;
+using SharpDox.Sdk.Exporter;
+using SharpDox.Sdk.Config;
+
+namespace ExampleExporter
+{
+    public class ExampleExporter : IExporter
+    {
+        public event Action&lt;string&gt; OnRequirementsWarning;
+        public event Action&lt;string&gt; OnStepMessage;
+        public event Action&lt;int&gt; OnStepProgress;
+
+        public bool CheckRequirements()
+        {
+            // Check for requirements
+        }
+
+        public void Export(SDRepository repository, string outputPath)
+        {
+            //Exportcode
+        }
+
+        public string ExporterName { get { return "example"; } }
+
+        public string Author { get { return "example"; } }
+
+        public string Description { get { return "example"; } }
+    }
+}
+</code></pre>
+
+<p>Ein ausführlicheres Beispiel ist <a href="../article/Erstellen_eines_Exporters.html">hier</a> zu finden.</p>
+
+					</div>
+					<h3 class="box-title">Typen</h3>
+
+				
+
+				<div class="table-box">
+					<table>
+						<thead>
+							<tr>
+								<td></td>
+								<td>Name</td>
+								<td>Description</td>
+							</tr>
+						</thead>
+						<tbody>			
+
+							
+
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../images/icons/Class_public.png">
+									</td>
+									<td>
+										<a title="IExporter" href="../type/3997659b-fa95-4a36-a36a-12b655f85086.html">IExporter</a>
+									</td>	
+									<td class="markdown">
+										
+											<p>Exportplugins müssen dieses Interface implementieren.</p>
+
+										
+									</td>
+								</tr>
+
+							
+
+						</tbody>
+					</table>
+				</div>
+
+				
+
+				
+
+			</div>
+		</div>
+	   
+    </body>
+</html>
+

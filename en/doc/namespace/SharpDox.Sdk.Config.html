@@ -1,0 +1,214 @@
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SharpDox.Sdk.Config</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>        
+       
+	    <div id="dropdown-1" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+					<li><a href="../type/IConfigController.html"><img alt="Class-Icon" src="../assets/images/icons/Class_public.png"> IConfigController</a></li>
+
+				
+					<li><a href="../type/IConfigSection.html"><img alt="Class-Icon" src="../assets/images/icons/Class_public.png"> IConfigSection</a></li>
+
+				
+					<li><a href="../type/ICoreConfigSection.html"><img alt="Class-Icon" src="../assets/images/icons/Class_public.png"> ICoreConfigSection</a></li>
+
+				
+			</ul>
+		</div>
+	   
+	    <div class="ui-layout-north">
+			<div class="toolbar">
+				<a href="#" data-dropdown="#dropdown-1" class="button"><img src="../assets/images/icons/Class_public.png"/> Types <span class="info">(3)</span> <i class="icon-caret-down"></i></a>
+				<div class="right">
+					<span class="toolbar-info"> Assembly: SharpDox.Sdk</span>
+					<a href="#" id="print-button" class="button" title="Print"><i class="icon-print"></i></a>
+				</div>
+			</div>
+		</div>
+        
+		<div class="ui-layout-center">
+			
+				<h3 class="box-title first-heading">Description</h3>
+				
+				<div class="text-box markdown">
+					
+
+					<p>The config namespace provides the interface to implement custom config
+sections in the <strong>sharpDox</strong> config file.</p>
+
+<p>Following an example how to implement a config section with a single config item:</p>
+
+<pre><code>using System.ComponentModel;
+using System;
+using SharpDox.Sdk.Config;
+
+namespace ExamplePlugin
+{
+    public class ExampleConfig : IConfigSection
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private string _exampleItem;
+
+        public string ExampleItem
+        {
+            get { return _exampleItem; }
+            set
+            {
+                _exampleItem = value;
+                OnPropertyChanged("ExampleItem");
+            }
+        }
+
+        public Guid Guid { get { return new Guid("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXXX"); } }         
+    }
+}
+</code></pre>
+
+<p>To get access to a config section feed the constructor of your plugin with it. <strong>sharpDox</strong> takes care that the plugin will get the instance of the current config section. Following an example how to get a config section:</p>
+
+<pre><code>using System;
+using SharpDox.Model.Repository;
+using SharpDox.Sdk.Exporter;
+using SharpDox.Sdk.Config;
+
+namespace ExampleExporter
+{
+    public class ExampleExporter : IExporter
+    {
+        public event Action&lt;string&gt; OnStepMessage;
+        public event Action&lt;int&gt; OnStepProgress;
+
+        private readonly ExampleConfig _exampleConfig;
+
+        //Fill the constructor with the config section
+        public ExampleExporter(ExampleConfig exampleConfig)
+        {
+            _exampleConfig = exampleConfig;
+        }
+
+        public void Export(SDRepository repository, string outputPath)
+        {
+            //Exportcode
+        }
+
+        public string ExporterName { get { return "example"; } }
+    }
+}
+</code></pre>
+
+				</div>
+				<h3 class="box-title">Types</h3>
+
+			
+
+			<div class="table-box">
+				<table>
+					<thead>
+						<tr>
+							<td></td>
+							<td>Name</td>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>			
+
+						
+
+							<tr >
+								<td class="iconColumn">
+									<img alt="Class-Icon" src="../assets/images/icons/Class_public.png">
+								</td>
+								<td>
+									<a title="IConfigController" href="../type/IConfigController.html">IConfigController</a>
+								</td>	
+								<td class="markdown">
+									
+										<p>This interface exposes all needed functionalities to
+work with config files.</p>
+
+									
+								</td>
+							</tr>
+
+						
+
+							<tr  class="even" >
+								<td class="iconColumn">
+									<img alt="Class-Icon" src="../assets/images/icons/Class_public.png">
+								</td>
+								<td>
+									<a title="IConfigSection" href="../type/IConfigSection.html">IConfigSection</a>
+								</td>	
+								<td class="markdown">
+									
+										<p>Every plugin which needs new configuration items can implement this interface.</p>
+
+									
+								</td>
+							</tr>
+
+						
+
+							<tr >
+								<td class="iconColumn">
+									<img alt="Class-Icon" src="../assets/images/icons/Class_public.png">
+								</td>
+								<td>
+									<a title="ICoreConfigSection" href="../type/ICoreConfigSection.html">ICoreConfigSection</a>
+								</td>	
+								<td class="markdown">
+									
+										<p>All core configuration items of sharpDox.</p>
+
+									
+								</td>
+							</tr>
+
+						
+
+					</tbody>
+				</table>
+			</div>
+
+			
+
+			
+		</div>
+	   
+    </body>
+</html>
+

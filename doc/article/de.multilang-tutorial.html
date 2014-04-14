@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>      	
+		<div class="ui-layout-center">
+			<div class="text-box markdown no-margin">
+				
+
+				<p>Mit <strong>sharpDox</strong> ist es möglich mehrsprachige Dokumentationen zu erstellen.
+Für Beschreibungen, Artikel und einer lokalisierten Navigation wird lediglich der Ländercode als Prefix für die Dateien genutzt. Bei Navigationen wird der Dateiname geändert. Hier einige Beispiele:</p>
+
+<p><strong>Namensraum-Beschreibungen</strong></p>
+
+<pre><code>Original: SharpDox.Sdk.sdnd
+Übersetzt: en.SharpDox.Sdk.sdnd
+</code></pre>
+
+<p><strong>Artikel</strong></p>
+
+<pre><code>Original: exporter-tutorial.sda
+Übersetzt: en.exporter-tutorial.sda
+</code></pre>
+
+<p><strong>Projektbeschreibung</strong></p>
+
+<pre><code>Original: README
+Übersetzt: en.README
+</code></pre>
+
+<p><strong>Navigation</strong></p>
+
+<pre><code>Original: default.sdnav
+Übersetzt: en.sdnav
+</code></pre>
+
+<p>Da in den Visual Studio Kommentaren keine Mehrsprachigkeit angedacht ist, müssen die Inline-Kommentare etwas verändert werden. Damit kann <strong>sharpDox</strong> mehrsprachige Code-Dokumentationen erstellen.</p>
+
+<p><strong>Code-Dokumentation</strong></p>
+
+<pre><code>Original:
+&lt;summary&gt;SUMMARY&lt;/summary&gt;
+&lt;remarks&gt;REMARKS&lt;/remarks&gt;
+[...]
+
+Übersetzt:
+&lt;default&gt;
+    &lt;summary&gt;SUMMARY&lt;/summary&gt;
+    &lt;remarks&gt;REMARKS&lt;/remarks&gt;
+    [...]
+&lt;/default&gt;
+&lt;en&gt;
+    &lt;summary&gt;EN_SUMMARY&lt;/summary&gt;
+    &lt;remarks&gt;EN_REMARKS&lt;/remarks&gt;
+    [...]
+&lt;/en&gt;
+</code></pre>
+
+			</div>
+		</div> 
+    </body>
+</html>
+

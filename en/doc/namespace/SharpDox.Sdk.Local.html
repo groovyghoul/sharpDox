@@ -1,0 +1,136 @@
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SharpDox.Sdk.Local</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>        
+       
+	    <div id="dropdown-1" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+					<li><a href="../type/ILocalStrings.html"><img alt="Class-Icon" src="../assets/images/icons/Class_public.png"> ILocalStrings</a></li>
+
+				
+			</ul>
+		</div>
+	   
+	    <div class="ui-layout-north">
+			<div class="toolbar">
+				<a href="#" data-dropdown="#dropdown-1" class="button"><img src="../assets/images/icons/Class_public.png"/> Types <span class="info">(1)</span> <i class="icon-caret-down"></i></a>
+				<div class="right">
+					<span class="toolbar-info"> Assembly: SharpDox.Sdk</span>
+					<a href="#" id="print-button" class="button" title="Print"><i class="icon-print"></i></a>
+				</div>
+			</div>
+		</div>
+        
+		<div class="ui-layout-center">
+			
+				<h3 class="box-title first-heading">Description</h3>
+				
+				<div class="text-box markdown">
+					
+
+					<p>The local namespace provides the interface to implement custom strings for <strong>sharpDox</strong>. <em>SharpDoxStrings</em> contains all strings of the core application. 
+The default language of <strong>sharpDox</strong> is english. </p>
+
+<p>On the start process <strong>sharpDox</strong> creates a language file in the folder <em>lang/defaults</em> for each registered local strings type.
+For example the <em>en.SharpDox.sdlang</em>. This file contains all strings of the core application. If the tool should be available in Spanish, create a copy of <em>en.SharpDox.sdlang</em> into the <em>lang</em> folder and rename it to <em>es.SharpDox.sdlang</em>. The file always starts with the two letter language code. Now translate all the strings to spanish.</p>
+
+<p>If the windows system language is set to spanish, <strong>sharpDox</strong> will take all <em>es.*</em> language files to show the translations. If no translation for a string is available, <strong>sharpDox</strong> takes the default string.</p>
+
+<p>Following an example how to implement a custom strings type with a single string:</p>
+
+<pre><code>using SharpDox.Sdk.Local;
+
+namespace ExampleExporter
+{
+    public class ExampleStrings : ILocalStrings
+    {
+        private string _exampleString = "English String";
+
+        public string ExampleString
+        {
+            get { return _exampleString; }
+            set { _exampleString = value; }
+        }
+
+        public string DisplayName { get { return "ExampleExporter"; } }
+    }
+}
+</code></pre>
+
+<p>The usage of a custom strings type is like using a custom config section. Please see the <a href="../namespace/SharpDox.Sdk.Config.html">SharpDox.Sdk.Config</a> description.</p>
+
+				</div>
+				<h3 class="box-title">Types</h3>
+
+			
+
+			<div class="table-box">
+				<table>
+					<thead>
+						<tr>
+							<td></td>
+							<td>Name</td>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>			
+
+						
+
+							<tr >
+								<td class="iconColumn">
+									<img alt="Class-Icon" src="../assets/images/icons/Class_public.png">
+								</td>
+								<td>
+									<a title="ILocalStrings" href="../type/ILocalStrings.html">ILocalStrings</a>
+								</td>	
+								<td class="markdown">
+									
+										<p>Every plugin which wants to use localized
+strings has to implement this interface.</p>
+
+									
+								</td>
+							</tr>
+
+						
+
+					</tbody>
+				</table>
+			</div>
+
+			
+
+			
+		</div>
+	   
+    </body>
+</html>
+

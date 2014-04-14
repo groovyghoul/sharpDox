@@ -1,0 +1,1469 @@
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SDRepository</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>        
+        
+		<!-- DropDowns -->
+		<div id="dropdown-1" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+
+					<li><a href="#_methodNameCount"><img alt="Field-Icon" src="../assets/images/icons/Field_private.png"> _methodNameCount</a></li>
+
+				
+
+					<li><a href="#_typeNameCount"><img alt="Field-Icon" src="../assets/images/icons/Field_private.png"> _typeNameCount</a></li>
+
+				
+
+					<li><a href="#_uniqueShortMethodIdentifier"><img alt="Field-Icon" src="../assets/images/icons/Field_private.png"> _uniqueShortMethodIdentifier</a></li>
+
+				
+
+					<li><a href="#_uniqueShortTypeIdentifier"><img alt="Field-Icon" src="../assets/images/icons/Field_private.png"> _uniqueShortTypeIdentifier</a></li>
+
+				
+			</ul>
+		</div>
+
+		<div id="dropdown-2" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+			</ul>
+		</div>
+
+		<div id="dropdown-3" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+
+				
+
+					<li><a href="#GetAllMethods"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetAllMethods()</a></li>
+
+				
+
+					<li><a href="#GetAllNamespaces"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetAllNamespaces()</a></li>
+
+				
+
+					<li><a href="#GetAllTypes"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetAllTypes()</a></li>
+
+				
+
+					<li><a href="#GetGuidByIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetGuidByIdentifier(String identifier)</a></li>
+
+				
+
+					<li><a href="#GetMemberByIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetMemberByIdentifier(String identifier)</a></li>
+
+				
+
+					<li><a href="#GetMethodByIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetMethodByIdentifier(String identifier)</a></li>
+
+				
+
+					<li><a href="#GetNamespaceByIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetNamespaceByIdentifier(String identifier)</a></li>
+
+				
+
+					<li><a href="#GetTypeByIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> GetTypeByIdentifier(String identifier)</a></li>
+
+				
+
+					<li><a href="#GetUniqueShortMethodIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_private.png"> GetUniqueShortMethodIdentifier(SDMethod sdMethod)</a></li>
+
+				
+
+					<li><a href="#GetUniqueShortTypeIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_private.png"> GetUniqueShortTypeIdentifier(SDType sdType)</a></li>
+
+				
+
+					<li><a href="#GetUniquieShortIdentifier"><img alt="Method-Icon" src="../assets/images/icons/Method_private.png"> GetUniquieShortIdentifier(String identifier, String name, Dictionary nameCount, Dictionary uniqueIdentifiers)</a></li>
+
+				
+			</ul>
+		</div>
+
+		<div id="dropdown-4" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+
+					<li><a href="#Articles"><img alt="Property-Icon" src="../assets/images/icons/Properties_public.png"> Articles</a></li>
+
+				
+
+					<li><a href="#DocumentationLanguages"><img alt="Property-Icon" src="../assets/images/icons/Properties_public.png"> DocumentationLanguages</a></li>
+
+				
+
+					<li><a href="#Images"><img alt="Property-Icon" src="../assets/images/icons/Properties_public.png"> Images</a></li>
+
+				
+
+					<li><a href="#Members"><img alt="Property-Icon" src="../assets/images/icons/Properties_private.png"> Members</a></li>
+
+				
+
+					<li><a href="#Methods"><img alt="Property-Icon" src="../assets/images/icons/Properties_private.png"> Methods</a></li>
+
+				
+
+					<li><a href="#Namespaces"><img alt="Property-Icon" src="../assets/images/icons/Properties_private.png"> Namespaces</a></li>
+
+				
+
+					<li><a href="#ProjectInfo"><img alt="Property-Icon" src="../assets/images/icons/Properties_public.png"> ProjectInfo</a></li>
+
+				
+
+					<li><a href="#Types"><img alt="Property-Icon" src="../assets/images/icons/Properties_private.png"> Types</a></li>
+
+				
+			</ul>
+		</div>
+		<!-- DropDowns Ende -->
+
+	    <div class="ui-layout-north">
+			<div class="toolbar">
+
+									<a href="#" data-dropdown="#dropdown-1" class="button"><img src="../assets/images/icons/Field_public.png"/> Fields <span class="info">(4)</span> <i class="icon-caret-down"></i></a>
+				
+					<a href="#" data-dropdown="#dropdown-3" class="button"><img src="../assets/images/icons/Method_public.png"/> Methods <span class="info">(11)</span> <i class="icon-caret-down"></i></a>
+				
+					<a href="#" data-dropdown="#dropdown-4" class="button"><img src="../assets/images/icons/Properties_public.png"/> Properties <span class="info">(8)</span> <i class="icon-caret-down"></i></a>
+				
+
+				<div class="right">
+					<span class="toolbar-info"> Namespace: SharpDox.Model.Repository</span>
+					<a href="#" id="expand-all-button" class="button"><i class="icon-align-justify" title="Expand all"></i></a>
+					<a href="#" id="print-button" class="button"><i class="icon-print" title="Print"></i></a>
+				</div>
+			</div>
+		</div>
+        
+		<div class="ui-layout-center">
+			
+			<h3 class="box-title first-heading">Syntax</h3>					
+			<div class="syntax-box">
+				<pre class="wrap-pre"><code>public class SDRepository</code></pre>
+			</div>
+
+			
+
+			
+        
+			
+
+				
+					<h3 class="box-title">Summary</h3>
+					<div class="doc-box markdown">
+						<p>The repository contains the whole parsed solution.</p>
+
+					</div>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+			
+
+			
+
+			
+
+			
+				<h3 class="box-title">Fields</h3>
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="_methodNameCount" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Field_private.png"/> <p>_methodNameCount</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String, Int32&gt; _methodNameCount</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="_typeNameCount" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Field_private.png"/> <p>_typeNameCount</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String, Int32&gt; _typeNameCount</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="_uniqueShortMethodIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Field_private.png"/> <p>_uniqueShortMethodIdentifier</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String&gt; _uniqueShortMethodIdentifier</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="_uniqueShortTypeIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Field_private.png"/> <p>_uniqueShortTypeIdentifier</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String&gt; _uniqueShortTypeIdentifier</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+			
+
+			
+
+			
+				<h3 class="box-title">Methods</h3>
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetAllMethods" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetAllMethods()</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets a list of all methods.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public List&lt;SDMethod&gt; GetAllMethods()</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>A list containing all methods.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetAllNamespaces" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetAllNamespaces()</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets a list of all namespaces.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public List&lt;SDNamespace&gt; GetAllNamespaces()</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>A list containing all namespaces.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetAllTypes" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetAllTypes()</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets a list of all types.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public List&lt;SDType&gt; GetAllTypes()</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>A list containing all types.</p>
+
+				</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetGuidByIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetGuidByIdentifier(String identifier)</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public Guid GetGuidByIdentifier(String identifier)</code></pre>
+		</div>		
+        
+		
+
+		
+			<div id="sd-sequence-diagram" class="svgpan">
+				
+				<svg height="290.50" width="318.02"><g transform=""><rect height="35" width="273" x="0.55" y="10.50" fill="#FFFFFF" stroke="#979797" stroke-width="1" /><a xlink:href="../type/SDRepository.html" xmlns:xlink="xlink"><text x="15.50" y="32.00" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[SharpDox.Model.Repository.SDRepository]]></text></a><a xlink:href="../type/SDRepository.html#GetGuidByIdentifier" xmlns:xlink="xlink"><text x="10.00" y="90.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetGuidByIdentifier]]></text></a><path d="M0.00,100.50L137.08,100.50" stroke="#979797" stroke-width="1" /><polygon points="137,100 132,95 132,105" fill="#979797" stroke="#979797" stroke-width="" /><a xlink:href="../type/SDRepository.html#GetNamespaceByIdentifier" xmlns:xlink="xlink"><text x="147.08" y="125.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetNamespaceByIdentifier]]></text></a><path d="M137.08,125.50L127.08,125.50" stroke="#979797" stroke-width="1" /><path d="M127.08,125.50L127.08,135.50" stroke="#979797" stroke-width="1" /><path d="M127.08,135.50L137.08,135.50" stroke="#979797" stroke-width="1" /><polygon points="137,135 132,130 132,140" fill="#979797" stroke="#979797" stroke-width="" /><a xlink:href="../type/SDRepository.html#GetTypeByIdentifier" xmlns:xlink="xlink"><text x="147.08" y="160.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetTypeByIdentifier]]></text></a><path d="M137.08,160.50L127.08,160.50" stroke="#979797" stroke-width="1" /><path d="M127.08,160.50L127.08,170.50" stroke="#979797" stroke-width="1" /><path d="M127.08,170.50L137.08,170.50" stroke="#979797" stroke-width="1" /><polygon points="137,170 132,165 132,175" fill="#979797" stroke="#979797" stroke-width="" /><a xlink:href="../type/SDRepository.html#GetMethodByIdentifier" xmlns:xlink="xlink"><text x="147.08" y="195.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetMethodByIdentifier]]></text></a><path d="M137.08,195.50L127.08,195.50" stroke="#979797" stroke-width="1" /><path d="M127.08,195.50L127.08,205.50" stroke="#979797" stroke-width="1" /><path d="M127.08,205.50L137.08,205.50" stroke="#979797" stroke-width="1" /><polygon points="137,205 132,200 132,210" fill="#979797" stroke="#979797" stroke-width="" /><a xlink:href="../type/SDRepository.html#GetMemberByIdentifier" xmlns:xlink="xlink"><text x="147.08" y="230.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetMemberByIdentifier]]></text></a><path d="M137.08,230.50L127.08,230.50" stroke="#979797" stroke-width="1" /><path d="M127.08,230.50L127.08,240.50" stroke="#979797" stroke-width="1" /><path d="M127.08,240.50L137.08,240.50" stroke="#979797" stroke-width="1" /><polygon points="137,240 132,235 132,245" fill="#979797" stroke="#979797" stroke-width="" /><text x="10.00" y="265.50" fill="" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="" onmouseout=""><![CDATA[return Guid]]></text><path d="M0.00,275.50L137.08,275.50" stroke="#979797" stroke-width="1" /><polygon points="0,275 5,280 5,270" fill="#979797" stroke="#979797" stroke-width="" /><path d="M137.51,45L137.51,290.55" stroke="#979797" stroke-width="1" /></g></svg>
+			</div>
+			<div class="legend"><p>Drag to pan - Use Mousewheel to zoom</p></div>
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetMemberByIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetMemberByIdentifier(String identifier)</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Returns a member other than a method/constructor, referenced by its identifier.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public SDMember GetMemberByIdentifier(String identifier)</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>The member, if it is available.</p>
+
+				</div>
+			
+
+			
+
+			
+				<p class="member-box-title">Parameters</p>
+				<div class="member-doc-box markdown">
+					
+						<p>identifier</p>
+						<div class="inline">
+							<p>The identifier of the member.</p>
+
+						</div>
+					
+				</div>
+			
+
+			
+
+			
+
+		
+
+		
+			<div id="sd-sequence-diagram" class="svgpan">
+				
+				<svg height="225.50" width="293.66"><g transform=""><rect height="35" width="273" x="0.55" y="10.50" fill="#FFFFFF" stroke="#979797" stroke-width="1" /><a xlink:href="../type/SDRepository.html" xmlns:xlink="xlink"><text x="15.50" y="32.00" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[SharpDox.Model.Repository.SDRepository]]></text></a><a xlink:href="../type/SDRepository.html#GetMemberByIdentifier" xmlns:xlink="xlink"><text x="10.00" y="90.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetMemberByIdentifier]]></text></a><path d="M0.00,100.50L137.08,100.50" stroke="#979797" stroke-width="1" /><polygon points="137,100 132,95 132,105" fill="#979797" stroke="#979797" stroke-width="" /><text x="20.00" y="125.50" fill="" style="" text-anchor="" font-family="" font-size="10.00" onmouseover="" onmouseout=""><![CDATA[if (sdMember == null)]]></text><a xlink:href="../type/SDRepository.html#GetMethodByIdentifier" xmlns:xlink="xlink"><text x="147.08" y="145.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetMethodByIdentifier]]></text></a><path d="M137.08,145.50L127.08,145.50" stroke="#979797" stroke-width="1" /><path d="M127.08,145.50L127.08,155.50" stroke="#979797" stroke-width="1" /><path d="M127.08,155.50L137.08,155.50" stroke="#979797" stroke-width="1" /><polygon points="137,155 132,150 132,160" fill="#979797" stroke="#979797" stroke-width="" /><text x="20.00" y="170.50" fill="" style="" text-anchor="" font-family="" font-size="10.00" onmouseover="" onmouseout=""><![CDATA[end]]></text><text x="10.00" y="200.50" fill="" style="" text-anchor="" font-family="" font-size="12.00" onmouseover="" onmouseout=""><![CDATA[return SDMember]]></text><path d="M0.00,210.50L137.08,210.50" stroke="#979797" stroke-width="1" /><polygon points="0,210 5,215 5,205" fill="#979797" stroke="#979797" stroke-width="" /><path d="M137.51,45L137.51,225.55" stroke="#979797" stroke-width="1" /></g></svg>
+			</div>
+			<div class="legend"><p>Drag to pan - Use Mousewheel to zoom</p></div>
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetMethodByIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetMethodByIdentifier(String identifier)</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Returns a method, referenced by its identifier.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public SDMethod GetMethodByIdentifier(String identifier)</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>The method, if it is available.</p>
+
+				</div>
+			
+
+			
+
+			
+				<p class="member-box-title">Parameters</p>
+				<div class="member-doc-box markdown">
+					
+						<p>identifier</p>
+						<div class="inline">
+							<p>The identifier of the method.</p>
+
+						</div>
+					
+				</div>
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetNamespaceByIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetNamespaceByIdentifier(String identifier)</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Returns a namespace, referenced by its identifier.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public SDNamespace GetNamespaceByIdentifier(String identifier)</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>The namespace if it is available.</p>
+
+				</div>
+			
+
+			
+
+			
+				<p class="member-box-title">Parameters</p>
+				<div class="member-doc-box markdown">
+					
+						<p>identifier</p>
+						<div class="inline">
+							<p>The identifier of the namespace.</p>
+
+						</div>
+					
+				</div>
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetTypeByIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>GetTypeByIdentifier(String identifier)</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Returns a type, referenced by its identifier.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public SDType GetTypeByIdentifier(String identifier)</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Returns</p>
+				<div class="member-doc-box">
+					<p>The type, if it is available.</p>
+
+				</div>
+			
+
+			
+
+			
+				<p class="member-box-title">Parameters</p>
+				<div class="member-doc-box markdown">
+					
+						<p>identifier</p>
+						<div class="inline">
+							<p>The identifier of the type.</p>
+
+						</div>
+					
+				</div>
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetUniqueShortMethodIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_private.png"/> <p>GetUniqueShortMethodIdentifier(SDMethod sdMethod)</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private String GetUniqueShortMethodIdentifier(SDMethod sdMethod)</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetUniqueShortTypeIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_private.png"/> <p>GetUniqueShortTypeIdentifier(SDType sdType)</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private String GetUniqueShortTypeIdentifier(SDType sdType)</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="GetUniquieShortIdentifier" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_private.png"/> <p>GetUniquieShortIdentifier(String identifier, String name, Dictionary nameCount, Dictionary uniqueIdentifiers)</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private String GetUniquieShortIdentifier(String identifier, String name, Dictionary nameCount, Dictionary uniqueIdentifiers)</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+			
+
+			
+				<h3 class="box-title">Properties</h3>
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="Articles" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_public.png"/> <p>Articles</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets the structure of the parsed navigation files including all parsed articles.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public Dictionary&lt;String, List&lt;SDArticle&gt;&gt; Articles { get; set; }</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="DocumentationLanguages" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_public.png"/> <p>DocumentationLanguages</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets a list of all available documentation languages.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public List&lt;String&gt; DocumentationLanguages { get; set; }</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="Images" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_public.png"/> <p>Images</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets a list of all available images.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public List&lt;String&gt; Images { get; set; }</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="Members" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_private.png"/> <p>Members</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String, SDMember&gt; Members { get; set; }</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="Methods" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_private.png"/> <p>Methods</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String, SDMethod&gt; Methods { get; set; }</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="Namespaces" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_private.png"/> <p>Namespaces</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String, SDNamespace&gt; Namespaces { get; set; }</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="ProjectInfo" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_public.png"/> <p>ProjectInfo</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Gets the project infos of the parsed solution.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public SDProjectInfo ProjectInfo { get; set; }</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="Types" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Properties_private.png"/> <p>Types</p></a>
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>private Dictionary&lt;String, SDType&gt; Types { get; set; }</code></pre>
+		</div>		
+        
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+			
+
+			<h3 class="box-title">Classdiagram</h3>
+			
+				<div id="sd-class-diagram" class="svgpan">
+					
+					<svg height="670.50" width="341.00"><g transform=""><rect height="666" width="340" x="0.55" y="0.55" fill="#FFFFFF" stroke="#979797" stroke-width="1" /><text x="137.01" y="20.50" fill="" style="" text-anchor="" font-family="" font-size="11.00" onmouseover="" onmouseout=""><![CDATA[public  class]]></text><a xlink:href="../type/SDRepository.html" xmlns:xlink="xlink"><text x="122.97" y="40.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[SDRepository]]></text></a><path d="M0.5,55.50L341.00,55.50" stroke="#979797" stroke-width="1" /><image width="16.00" height="16.00" x="15.00" y="68.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAPZQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFev8PL0ytHeuMDSsbrNrLfLfLTpr9b8NWO1+vv93+PqoKvCvcbWeoqhXJvYvsvlxMzZmKe8b4CXt8/mWprXtcTh4+bqu8XUkJ60ydDdZHaNZHaOwtnw0tfivsfWY3WNxdvxrL3eu8PUQUtYXW+HyM7ZsrvOVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////oVh58wAAAAF0Uk5TAEDm2GYAAAABYktHRFGUaXwqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAqklEQVQY02NgwA0YmZhR+CysbOwcSHxOLm4eXnY+OJ9fQJCHR0hYBC4gKibOIyEpJQ0XkJGVlJOUlwYJKCgqKasoyMioqqlLS0trMDAoaqpoaevoysgAudJ6QAX6BgwMKoZGxiABE6AOUzNzCwtLK1NrYwifwUITCGxs7RjspR3AxjtqOjk52Sg5w+1T0XRxcnFxdYMLaCm623q4enrBBUy9fXz9/ANMYXwAXkgU2UqB5RoAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTItMDctMjlUMTE6NTI6MzcrMDI6MDDDSjZ3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEwLTA0LTAzVDA1OjExOjIwKzAyOjAwEMuWeAAAAABJRU5ErkJggg==" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#_methodNameCount" xmlns:xlink="xlink"><text x="40.00" y="80.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[_methodNameCount]]></text></a><image width="16.00" height="16.00" x="15.00" y="93.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAPZQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFev8PL0ytHeuMDSsbrNrLfLfLTpr9b8NWO1+vv93+PqoKvCvcbWeoqhXJvYvsvlxMzZmKe8b4CXt8/mWprXtcTh4+bqu8XUkJ60ydDdZHaNZHaOwtnw0tfivsfWY3WNxdvxrL3eu8PUQUtYXW+HyM7ZsrvOVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////oVh58wAAAAF0Uk5TAEDm2GYAAAABYktHRFGUaXwqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAqklEQVQY02NgwA0YmZhR+CysbOwcSHxOLm4eXnY+OJ9fQJCHR0hYBC4gKibOIyEpJQ0XkJGVlJOUlwYJKCgqKasoyMioqqlLS0trMDAoaqpoaevoysgAudJ6QAX6BgwMKoZGxiABE6AOUzNzCwtLK1NrYwifwUITCGxs7RjspR3AxjtqOjk52Sg5w+1T0XRxcnFxdYMLaCm623q4enrBBUy9fXz9/ANMYXwAXkgU2UqB5RoAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTItMDctMjlUMTE6NTI6MzcrMDI6MDDDSjZ3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEwLTA0LTAzVDA1OjExOjIwKzAyOjAwEMuWeAAAAABJRU5ErkJggg==" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#_typeNameCount" xmlns:xlink="xlink"><text x="40.00" y="105.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[_typeNameCount]]></text></a><image width="16.00" height="16.00" x="15.00" y="118.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAPZQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFev8PL0ytHeuMDSsbrNrLfLfLTpr9b8NWO1+vv93+PqoKvCvcbWeoqhXJvYvsvlxMzZmKe8b4CXt8/mWprXtcTh4+bqu8XUkJ60ydDdZHaNZHaOwtnw0tfivsfWY3WNxdvxrL3eu8PUQUtYXW+HyM7ZsrvOVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////oVh58wAAAAF0Uk5TAEDm2GYAAAABYktHRFGUaXwqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAqklEQVQY02NgwA0YmZhR+CysbOwcSHxOLm4eXnY+OJ9fQJCHR0hYBC4gKibOIyEpJQ0XkJGVlJOUlwYJKCgqKasoyMioqqlLS0trMDAoaqpoaevoysgAudJ6QAX6BgwMKoZGxiABE6AOUzNzCwtLK1NrYwifwUITCGxs7RjspR3AxjtqOjk52Sg5w+1T0XRxcnFxdYMLaCm623q4enrBBUy9fXz9/ANMYXwAXkgU2UqB5RoAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTItMDctMjlUMTE6NTI6MzcrMDI6MDDDSjZ3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEwLTA0LTAzVDA1OjExOjIwKzAyOjAwEMuWeAAAAABJRU5ErkJggg==" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#_uniqueShortMethodIdentifier" xmlns:xlink="xlink"><text x="40.00" y="130.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[_uniqueShortMethodIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="143.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAPZQTFRF/wD/0ub4fbLl5/H7zeP5eK/jir3uebDj3u360+f6ebDkkMT2mc3/jsLz0ub51ej7e7Lli8D0odD+ncnyKVqwfLPnkcPxnc/+n9D+stj7Hk6pADOZW5vYgrfqo9H+KFev8PL0ytHeuMDSsbrNrLfLfLTpr9b8NWO1+vv93+PqoKvCvcbWeoqhXJvYvsvlxMzZmKe8b4CXt8/mWprXtcTh4+bqu8XUkJ60ydDdZHaNZHaOwtnw0tfivsfWY3WNxdvxrL3eu8PUQUtYXW+HyM7ZsrvOVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////oVh58wAAAAF0Uk5TAEDm2GYAAAABYktHRFGUaXwqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAqklEQVQY02NgwA0YmZhR+CysbOwcSHxOLm4eXnY+OJ9fQJCHR0hYBC4gKibOIyEpJQ0XkJGVlJOUlwYJKCgqKasoyMioqqlLS0trMDAoaqpoaevoysgAudJ6QAX6BgwMKoZGxiABE6AOUzNzCwtLK1NrYwifwUITCGxs7RjspR3AxjtqOjk52Sg5w+1T0XRxcnFxdYMLaCm623q4enrBBUy9fXz9/ANMYXwAXkgU2UqB5RoAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTItMDctMjlUMTE6NTI6MzcrMDI6MDDDSjZ3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEwLTA0LTAzVDA1OjExOjIwKzAyOjAwEMuWeAAAAABJRU5ErkJggg==" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#_uniqueShortTypeIdentifier" xmlns:xlink="xlink"><text x="40.00" y="155.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[_uniqueShortTypeIdentifier]]></text></a><path d="M0.5,170.50L341.00,170.50" stroke="#979797" stroke-width="1" /><image width="16.00" height="16.00" x="15.00" y="178.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetAllMethods" xmlns:xlink="xlink"><text x="40.00" y="190.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetAllMethods]]></text></a><image width="16.00" height="16.00" x="15.00" y="203.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetAllNamespaces" xmlns:xlink="xlink"><text x="40.00" y="215.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetAllNamespaces]]></text></a><image width="16.00" height="16.00" x="15.00" y="228.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetAllTypes" xmlns:xlink="xlink"><text x="40.00" y="240.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetAllTypes]]></text></a><image width="16.00" height="16.00" x="15.00" y="253.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetGuidByIdentifier" xmlns:xlink="xlink"><text x="40.00" y="265.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetGuidByIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="278.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetMemberByIdentifier" xmlns:xlink="xlink"><text x="40.00" y="290.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetMemberByIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="303.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetMethodByIdentifier" xmlns:xlink="xlink"><text x="40.00" y="315.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetMethodByIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="328.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetNamespaceByIdentifier" xmlns:xlink="xlink"><text x="40.00" y="340.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetNamespaceByIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="353.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetTypeByIdentifier" xmlns:xlink="xlink"><text x="40.00" y="365.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetTypeByIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="378.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAT5QTFRF/wD/8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0/Pz8plCnu2+87qXv+pv7+pn75pjnkE6R+vr66eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5++ff58PL0ytHeuMDSsrvOrLfL09jb5MrkqFCp0mvT027UfjB/nzyfjTWOfC193+PqoKvC0tfieoqh6NHoqVCqy2fMlTiWeit78NXwmKe8vcbWb4CX7djtfzCAdSd169Hr4+bqkJ60ydDdZHaNZHaO7NLscSRy5szmvsfWY3WNu8PUQUtYXW+HyM7ZVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////nLrfiwAAAAF0Uk5TAEDm2GYAAAABYktHRGm8a8S0AAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NggANGJmYGZMDIxMLEisRnY2Ln4GTiArO5eXj5+JkEBIWEhJlEGEShKsTEJSSFpKRlGGS55XjkFRQZlJTFJVRU1dQZZKEqNDS1tHV09fQZDAyNjE1MzRjMLSytrG1s7RgYjOxNHRydGBicXVz13dw9GAwdPRkYvLwNGRh8LHz9/BkYAhwDg4KCQwKAxoSGhQPJIHsgcIyIhLswyj46OtrROAYuYGofGx0baxIHF3Awio9IMElMggsEJKekpqVnBMD4ALbeHpAzaZa1AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjA2KzAyOjAwBHBRHgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetUniqueShortMethodIdentifier" xmlns:xlink="xlink"><text x="40.00" y="390.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetUniqueShortMethodIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="403.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAT5QTFRF/wD/8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0/Pz8plCnu2+87qXv+pv7+pn75pjnkE6R+vr66eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5++ff58PL0ytHeuMDSsrvOrLfL09jb5MrkqFCp0mvT027UfjB/nzyfjTWOfC193+PqoKvC0tfieoqh6NHoqVCqy2fMlTiWeit78NXwmKe8vcbWb4CX7djtfzCAdSd169Hr4+bqkJ60ydDdZHaNZHaO7NLscSRy5szmvsfWY3WNu8PUQUtYXW+HyM7ZVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////nLrfiwAAAAF0Uk5TAEDm2GYAAAABYktHRGm8a8S0AAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NggANGJmYGZMDIxMLEisRnY2Ln4GTiArO5eXj5+JkEBIWEhJlEGEShKsTEJSSFpKRlGGS55XjkFRQZlJTFJVRU1dQZZKEqNDS1tHV09fQZDAyNjE1MzRjMLSytrG1s7RgYjOxNHRydGBicXVz13dw9GAwdPRkYvLwNGRh8LHz9/BkYAhwDg4KCQwKAxoSGhQPJIHsgcIyIhLswyj46OtrROAYuYGofGx0baxIHF3Awio9IMElMggsEJKekpqVnBMD4ALbeHpAzaZa1AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjA2KzAyOjAwBHBRHgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetUniqueShortTypeIdentifier" xmlns:xlink="xlink"><text x="40.00" y="415.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetUniqueShortTypeIdentifier]]></text></a><image width="16.00" height="16.00" x="15.00" y="428.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAT5QTFRF/wD/8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0/Pz8plCnu2+87qXv+pv7+pn75pjnkE6R+vr66eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5++ff58PL0ytHeuMDSsrvOrLfL09jb5MrkqFCp0mvT027UfjB/nzyfjTWOfC193+PqoKvC0tfieoqh6NHoqVCqy2fMlTiWeit78NXwmKe8vcbWb4CX7djtfzCAdSd169Hr4+bqkJ60ydDdZHaNZHaO7NLscSRy5szmvsfWY3WNu8PUQUtYXW+HyM7ZVWiBxMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8////nLrfiwAAAAF0Uk5TAEDm2GYAAAABYktHRGm8a8S0AAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NggANGJmYGZMDIxMLEisRnY2Ln4GTiArO5eXj5+JkEBIWEhJlEGEShKsTEJSSFpKRlGGS55XjkFRQZlJTFJVRU1dQZZKEqNDS1tHV09fQZDAyNjE1MzRjMLSytrG1s7RgYjOxNHRydGBicXVz13dw9GAwdPRkYvLwNGRh8LHz9/BkYAhwDg4KCQwKAxoSGhQPJIHsgcIyIhLswyj46OtrROAYuYGofGx0baxIHF3Awio9IMElMggsEJKekpqVnBMD4ALbeHpAzaZa1AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjA2KzAyOjAwBHBRHgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#GetUniquieShortIdentifier" xmlns:xlink="xlink"><text x="40.00" y="440.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[GetUniquieShortIdentifier]]></text></a><path d="M0.5,455.50L341.00,455.50" stroke="#979797" stroke-width="1" /><image width="16.00" height="16.00" x="15.00" y="463.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAXpQTFRF/wD/uKyjxLiV3dnUtaaBo5eAoJaAmY96k4VzgHFczci/nLiZpsGu0MjC+uuwf21b/+tu+uJy9Ndn3L1Ui3JRiZxphcyF7evngGtX/+1orphY+eFy991q8s9W7cdL+roipqJfU6xBfZ3fqrrarKSP+eN/lYRTTzow9ttp89JY7cNA6rsx7KgRjJBQQZ4ypMX/ucnl9uGDcGFL4s16Z2BSUD1B37IyyJkdxJMVjmIUUWZAP5cpt8rx5dOGiZKncGFK3sFhWU1X/9AfMycVCgcQLiECZVZPW3hZMowYwcjR////6enihHVe5eTfzsrC1qkuGxALYFxdlp2kp76kKWYc//37/P7+rK2wclxB09nj4+3/Rk5UwMfR/f7++Pv+8vb96PD83On/wsnToq/E/v//1uX/wcjS/P7/+Pr97/T75u773un60uL40OL/+fv/y979yM/Z9v//7Pn/4fD/1er/0ur/c3V8S0tOTU9UTVFWTFBTS09STE9SS05RJyP7MgAAAAF0Uk5TAEDm2GYAAAABYktHREoeDLXGAAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NgAAJGJmYWVjZ2Dk4ubh4Qn4GXj19AQEBQSFhEVAwsIC4hKSUgLSMrJ6+gyKCkpKSsoqomqa6hqaWto6vHoKRvoGJoZGwiaWpmbmFpZc2gZKNia2Rn7+Do5Ozi6ubuweDp5e3j6+Vn7x8QGMTAEBwCFAgN9fIKC4+IjIoG2xADEoiNi09ISIQIJHklJ6ckg0AqRCANqCI9IzMrOycXJpCcnAdWkQ8RKACqKCwsLCouKYUIlJVXVFRUVlXXVNdCBAgCAG+1MCPQVilsAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#Articles" xmlns:xlink="xlink"><text x="40.00" y="475.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Articles { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="488.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAXpQTFRF/wD/uKyjxLiV3dnUtaaBo5eAoJaAmY96k4VzgHFczci/nLiZpsGu0MjC+uuwf21b/+tu+uJy9Ndn3L1Ui3JRiZxphcyF7evngGtX/+1orphY+eFy991q8s9W7cdL+roipqJfU6xBfZ3fqrrarKSP+eN/lYRTTzow9ttp89JY7cNA6rsx7KgRjJBQQZ4ypMX/ucnl9uGDcGFL4s16Z2BSUD1B37IyyJkdxJMVjmIUUWZAP5cpt8rx5dOGiZKncGFK3sFhWU1X/9AfMycVCgcQLiECZVZPW3hZMowYwcjR////6enihHVe5eTfzsrC1qkuGxALYFxdlp2kp76kKWYc//37/P7+rK2wclxB09nj4+3/Rk5UwMfR/f7++Pv+8vb96PD83On/wsnToq/E/v//1uX/wcjS/P7/+Pr97/T75u773un60uL40OL/+fv/y979yM/Z9v//7Pn/4fD/1er/0ur/c3V8S0tOTU9UTVFWTFBTS09STE9SS05RJyP7MgAAAAF0Uk5TAEDm2GYAAAABYktHREoeDLXGAAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NgAAJGJmYWVjZ2Dk4ubh4Qn4GXj19AQEBQSFhEVAwsIC4hKSUgLSMrJ6+gyKCkpKSsoqomqa6hqaWto6vHoKRvoGJoZGwiaWpmbmFpZc2gZKNia2Rn7+Do5Ozi6ubuweDp5e3j6+Vn7x8QGMTAEBwCFAgN9fIKC4+IjIoG2xADEoiNi09ISIQIJHklJ6ckg0AqRCANqCI9IzMrOycXJpCcnAdWkQ8RKACqKCwsLCouKYUIlJVXVFRUVlXXVNdCBAgCAG+1MCPQVilsAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#DocumentationLanguages" xmlns:xlink="xlink"><text x="40.00" y="500.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[DocumentationLanguages { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="513.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAXpQTFRF/wD/uKyjxLiV3dnUtaaBo5eAoJaAmY96k4VzgHFczci/nLiZpsGu0MjC+uuwf21b/+tu+uJy9Ndn3L1Ui3JRiZxphcyF7evngGtX/+1orphY+eFy991q8s9W7cdL+roipqJfU6xBfZ3fqrrarKSP+eN/lYRTTzow9ttp89JY7cNA6rsx7KgRjJBQQZ4ypMX/ucnl9uGDcGFL4s16Z2BSUD1B37IyyJkdxJMVjmIUUWZAP5cpt8rx5dOGiZKncGFK3sFhWU1X/9AfMycVCgcQLiECZVZPW3hZMowYwcjR////6enihHVe5eTfzsrC1qkuGxALYFxdlp2kp76kKWYc//37/P7+rK2wclxB09nj4+3/Rk5UwMfR/f7++Pv+8vb96PD83On/wsnToq/E/v//1uX/wcjS/P7/+Pr97/T75u773un60uL40OL/+fv/y979yM/Z9v//7Pn/4fD/1er/0ur/c3V8S0tOTU9UTVFWTFBTS09STE9SS05RJyP7MgAAAAF0Uk5TAEDm2GYAAAABYktHREoeDLXGAAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NgAAJGJmYWVjZ2Dk4ubh4Qn4GXj19AQEBQSFhEVAwsIC4hKSUgLSMrJ6+gyKCkpKSsoqomqa6hqaWto6vHoKRvoGJoZGwiaWpmbmFpZc2gZKNia2Rn7+Do5Ozi6ubuweDp5e3j6+Vn7x8QGMTAEBwCFAgN9fIKC4+IjIoG2xADEoiNi09ISIQIJHklJ6ckg0AqRCANqCI9IzMrOycXJpCcnAdWkQ8RKACqKCwsLCouKYUIlJVXVFRUVlXXVNdCBAgCAG+1MCPQVilsAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#Images" xmlns:xlink="xlink"><text x="40.00" y="525.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Images { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="538.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAaFQTFRF/wD/7OvmrKSPqaGMpZyIoJaDmpB+lot6zci/nLiZpsGu9uGD9Nt38tJlz7JfmtOT////cltA78lQ67876bYpg6V2eMBdfZ3fqrracGFLc1k85LIn1qMcbpVkbLRTpMX/ucnl4s16b2FMcV1F37IyyJkds4gabVMfWIRPZKxMt8rx5dOGiZKncGFK3sFhMycVOiwQNSkXh4F5Q3Q9YadLkaC0/P786enihHVe5eTfzsrC1qkuRzUji46RQk9fq8GoTIJBi5uvwcvb0drlwcrcrK2wkYR1ytHeuMDSsbrNrLfL8PL09Pf0hZWq9/r78PX7wMjTmqe8kZ61vcbWeoqhf4+ljJuwhZSqkqG1wsnUxMzZi5uw7u/x3eDkb4CXeoqg7/X75u/61t/tsr3NsLnJZHaNZHaO4+bqdIWckqG2v8bTtr/O3+Pq0tfivsfWY3WN5Obn3OLn1Nzmy9bl3eTwqrTHQUtYXW+HanuTMkZgNUljjpmnnqq/yM7ZsrvOVWiBmqa9xMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8xL4vuQAAAAF0Uk5TAEDm2GYAAAABYktHRBCVsg0sAAAACXBIWXMAAAsSAAALEgHS3X78AAAA8ElEQVQY02NgAANGJmYWVjZ2Dk4uGJ+bm5uHl4+dix/EFQDyBYF8IWERUTEGcXFxCSZuSW4pIF9aRlaOQVxeAchXVOJVVlFVU9fQZBDXYtKW1NHVUxLRNzA0MjZhMDUzt7A0s9K1trG1Y2Cwd2BwNHNyNnNxcXVz9/D08mbwYfA1AwE/f/eAwKDgEKCdoWZh4X4RYZFR0TGxXnHeDAzxIPmExKTk8JSU1LR0BoYMoIqEzKzsHCDIzctnYIgzKygsKi4pzSkrK8v1KGdgqKisAoLqmpzastraunoGGGhwb8xrqmtugQukt7a1d3R2pTMAAGflNvO6n54wAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#Members" xmlns:xlink="xlink"><text x="40.00" y="550.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Members { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="563.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAaFQTFRF/wD/7OvmrKSPqaGMpZyIoJaDmpB+lot6zci/nLiZpsGu9uGD9Nt38tJlz7JfmtOT////cltA78lQ67876bYpg6V2eMBdfZ3fqrracGFLc1k85LIn1qMcbpVkbLRTpMX/ucnl4s16b2FMcV1F37IyyJkds4gabVMfWIRPZKxMt8rx5dOGiZKncGFK3sFhMycVOiwQNSkXh4F5Q3Q9YadLkaC0/P786enihHVe5eTfzsrC1qkuRzUji46RQk9fq8GoTIJBi5uvwcvb0drlwcrcrK2wkYR1ytHeuMDSsbrNrLfL8PL09Pf0hZWq9/r78PX7wMjTmqe8kZ61vcbWeoqhf4+ljJuwhZSqkqG1wsnUxMzZi5uw7u/x3eDkb4CXeoqg7/X75u/61t/tsr3NsLnJZHaNZHaO4+bqdIWckqG2v8bTtr/O3+Pq0tfivsfWY3WN5Obn3OLn1Nzmy9bl3eTwqrTHQUtYXW+HanuTMkZgNUljjpmnnqq/yM7ZsrvOVWiBmqa9xMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8xL4vuQAAAAF0Uk5TAEDm2GYAAAABYktHRBCVsg0sAAAACXBIWXMAAAsSAAALEgHS3X78AAAA8ElEQVQY02NgAANGJmYWVjZ2Dk4uGJ+bm5uHl4+dix/EFQDyBYF8IWERUTEGcXFxCSZuSW4pIF9aRlaOQVxeAchXVOJVVlFVU9fQZBDXYtKW1NHVUxLRNzA0MjZhMDUzt7A0s9K1trG1Y2Cwd2BwNHNyNnNxcXVz9/D08mbwYfA1AwE/f/eAwKDgEKCdoWZh4X4RYZFR0TGxXnHeDAzxIPmExKTk8JSU1LR0BoYMoIqEzKzsHCDIzctnYIgzKygsKi4pzSkrK8v1KGdgqKisAoLqmpzastraunoGGGhwb8xrqmtugQukt7a1d3R2pTMAAGflNvO6n54wAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#Methods" xmlns:xlink="xlink"><text x="40.00" y="575.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Methods { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="588.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAaFQTFRF/wD/7OvmrKSPqaGMpZyIoJaDmpB+lot6zci/nLiZpsGu9uGD9Nt38tJlz7JfmtOT////cltA78lQ67876bYpg6V2eMBdfZ3fqrracGFLc1k85LIn1qMcbpVkbLRTpMX/ucnl4s16b2FMcV1F37IyyJkds4gabVMfWIRPZKxMt8rx5dOGiZKncGFK3sFhMycVOiwQNSkXh4F5Q3Q9YadLkaC0/P786enihHVe5eTfzsrC1qkuRzUji46RQk9fq8GoTIJBi5uvwcvb0drlwcrcrK2wkYR1ytHeuMDSsbrNrLfL8PL09Pf0hZWq9/r78PX7wMjTmqe8kZ61vcbWeoqhf4+ljJuwhZSqkqG1wsnUxMzZi5uw7u/x3eDkb4CXeoqg7/X75u/61t/tsr3NsLnJZHaNZHaO4+bqdIWckqG2v8bTtr/O3+Pq0tfivsfWY3WN5Obn3OLn1Nzmy9bl3eTwqrTHQUtYXW+HanuTMkZgNUljjpmnnqq/yM7ZsrvOVWiBmqa9xMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8xL4vuQAAAAF0Uk5TAEDm2GYAAAABYktHRBCVsg0sAAAACXBIWXMAAAsSAAALEgHS3X78AAAA8ElEQVQY02NgAANGJmYWVjZ2Dk4uGJ+bm5uHl4+dix/EFQDyBYF8IWERUTEGcXFxCSZuSW4pIF9aRlaOQVxeAchXVOJVVlFVU9fQZBDXYtKW1NHVUxLRNzA0MjZhMDUzt7A0s9K1trG1Y2Cwd2BwNHNyNnNxcXVz9/D08mbwYfA1AwE/f/eAwKDgEKCdoWZh4X4RYZFR0TGxXnHeDAzxIPmExKTk8JSU1LR0BoYMoIqEzKzsHCDIzctnYIgzKygsKi4pzSkrK8v1KGdgqKisAoLqmpzastraunoGGGhwb8xrqmtugQukt7a1d3R2pTMAAGflNvO6n54wAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#Namespaces" xmlns:xlink="xlink"><text x="40.00" y="600.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Namespaces { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="613.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAXpQTFRF/wD/uKyjxLiV3dnUtaaBo5eAoJaAmY96k4VzgHFczci/nLiZpsGu0MjC+uuwf21b/+tu+uJy9Ndn3L1Ui3JRiZxphcyF7evngGtX/+1orphY+eFy991q8s9W7cdL+roipqJfU6xBfZ3fqrrarKSP+eN/lYRTTzow9ttp89JY7cNA6rsx7KgRjJBQQZ4ypMX/ucnl9uGDcGFL4s16Z2BSUD1B37IyyJkdxJMVjmIUUWZAP5cpt8rx5dOGiZKncGFK3sFhWU1X/9AfMycVCgcQLiECZVZPW3hZMowYwcjR////6enihHVe5eTfzsrC1qkuGxALYFxdlp2kp76kKWYc//37/P7+rK2wclxB09nj4+3/Rk5UwMfR/f7++Pv+8vb96PD83On/wsnToq/E/v//1uX/wcjS/P7/+Pr97/T75u773un60uL40OL/+fv/y979yM/Z9v//7Pn/4fD/1er/0ur/c3V8S0tOTU9UTVFWTFBTS09STE9SS05RJyP7MgAAAAF0Uk5TAEDm2GYAAAABYktHREoeDLXGAAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY02NgAAJGJmYWVjZ2Dk4ubh4Qn4GXj19AQEBQSFhEVAwsIC4hKSUgLSMrJ6+gyKCkpKSsoqomqa6hqaWto6vHoKRvoGJoZGwiaWpmbmFpZc2gZKNia2Rn7+Do5Ozi6ubuweDp5e3j6+Vn7x8QGMTAEBwCFAgN9fIKC4+IjIoG2xADEoiNi09ISIQIJHklJ6ckg0AqRCANqCI9IzMrOycXJpCcnAdWkQ8RKACqKCwsLCouKYUIlJVXVFRUVlXXVNdCBAgCAG+1MCPQVilsAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#ProjectInfo" xmlns:xlink="xlink"><text x="40.00" y="625.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[ProjectInfo { get; set; }]]></text></a><image width="16.00" height="16.00" x="15.00" y="638.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAaFQTFRF/wD/7OvmrKSPqaGMpZyIoJaDmpB+lot6zci/nLiZpsGu9uGD9Nt38tJlz7JfmtOT////cltA78lQ67876bYpg6V2eMBdfZ3fqrracGFLc1k85LIn1qMcbpVkbLRTpMX/ucnl4s16b2FMcV1F37IyyJkds4gabVMfWIRPZKxMt8rx5dOGiZKncGFK3sFhMycVOiwQNSkXh4F5Q3Q9YadLkaC0/P786enihHVe5eTfzsrC1qkuRzUji46RQk9fq8GoTIJBi5uvwcvb0drlwcrcrK2wkYR1ytHeuMDSsbrNrLfL8PL09Pf0hZWq9/r78PX7wMjTmqe8kZ61vcbWeoqhf4+ljJuwhZSqkqG1wsnUxMzZi5uw7u/x3eDkb4CXeoqg7/X75u/61t/tsr3NsLnJZHaNZHaO4+bqdIWckqG2v8bTtr/O3+Pq0tfivsfWY3WN5Obn3OLn1Nzmy9bl3eTwqrTHQUtYXW+HanuTMkZgNUljjpmnnqq/yM7ZsrvOVWiBmqa9xMzauMHSq7fLT2J7dYWcbX+WZ3eQXnCJV2qCT2N8xL4vuQAAAAF0Uk5TAEDm2GYAAAABYktHRBCVsg0sAAAACXBIWXMAAAsSAAALEgHS3X78AAAA8ElEQVQY02NgAANGJmYWVjZ2Dk4uGJ+bm5uHl4+dix/EFQDyBYF8IWERUTEGcXFxCSZuSW4pIF9aRlaOQVxeAchXVOJVVlFVU9fQZBDXYtKW1NHVUxLRNzA0MjZhMDUzt7A0s9K1trG1Y2Cwd2BwNHNyNnNxcXVz9/D08mbwYfA1AwE/f/eAwKDgEKCdoWZh4X4RYZFR0TGxXnHeDAzxIPmExKTk8JSU1LR0BoYMoIqEzKzsHCDIzctnYIgzKygsKi4pzSkrK8v1KGdgqKisAoLqmpzastraunoGGGhwb8xrqmtugQukt7a1d3R2pTMAAGflNvO6n54wAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEyLTA3LTI5VDExOjUzOjQxKzAyOjAwRZ1hagAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMC0wNC0wM1QwNToxMToyMCswMjowMBDLlngAAAAASUVORK5CYII=" xmlns:xlink="xlink" /><a xlink:href="../type/SDRepository.html#Types" xmlns:xlink="xlink"><text x="40.00" y="650.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[Types { get; set; }]]></text></a></g></svg>
+				</div>
+				<div class="legend"><p>Drag to pan - Use Mousewheel to zoom</p></div>
+			
+
+		</div>
+
+    </body>
+</html>
+

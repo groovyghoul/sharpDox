@@ -1,0 +1,301 @@
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - ISDDiagram</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>        
+        
+		<!-- DropDowns -->
+		<div id="dropdown-1" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+			</ul>
+		</div>
+
+		<div id="dropdown-2" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+			</ul>
+		</div>
+
+		<div id="dropdown-3" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+
+				
+
+					<li><a href="#ToPng"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> ToPng(String outputFilepath)</a></li>
+
+				
+
+					<li><a href="#ToSvg"><img alt="Method-Icon" src="../assets/images/icons/Method_public.png"> ToSvg(Double maxWidth)</a></li>
+
+				
+			</ul>
+		</div>
+
+		<div id="dropdown-4" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+			</ul>
+		</div>
+		<!-- DropDowns Ende -->
+
+	    <div class="ui-layout-north">
+			<div class="toolbar">
+
+				
+					<a href="#" data-dropdown="#dropdown-3" class="button"><img src="../assets/images/icons/Method_public.png"/> Methoden <span class="info">(2)</span> <i class="icon-caret-down"></i></a>
+				
+
+				<div class="right">
+					<span class="toolbar-info"> Namespace: SharpDox.UML</span>
+					<a href="#" id="expand-all-button" class="button"><i class="icon-align-justify" title="Alle ausklappen"></i></a>
+					<a href="#" id="print-button" class="button"><i class="icon-print" title="Drucken"></i></a>
+				</div>
+			</div>
+		</div>
+        
+		<div class="ui-layout-center">
+			
+			<h3 class="box-title first-heading">Syntax</h3>					
+			<div class="syntax-box">
+				<pre class="wrap-pre"><code>public interface ISDDiagram</code></pre>
+			</div>
+
+			
+
+			
+        
+			
+
+				
+					<h3 class="box-title">Beschreibung</h3>
+					<div class="doc-box markdown">
+						<p>Erweiterungen für <span class="inline-code">SDType</span>s und <span class="inline-code">SDMethod</span>s um UML-Diagramme zu erstellen.</p>
+
+					</div>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+				<h3 class="box-title">Methoden</h3>
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="ToPng" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>ToPng(String outputFilepath)</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Diese Methode speichert ein PNG des Diagramms in den angegebenen Pfad.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public abstract Void ToPng(String outputFilepath)</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+
+			
+
+			
+				<p class="member-box-title">Parameter</p>
+				<div class="member-doc-box markdown">
+					
+						<p>outputFilepath</p>
+						<div class="inline">
+							<p>Der Pfad in den Diagramm gespeichert werden soll.</p>
+
+						</div>
+					
+				</div>
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<div id="ToSvg" class="member">
+	<div class="member-header">		
+		<a href="#"><i class="icon-caret-right"></i><img src="../assets/images/icons/Method_public.png"/> <p>ToSvg(Double maxWidth)</p></a>
+		
+			
+				<div class="summary markdown">
+					<p>Diese Methode erstellt eine SVG-Repräsentation des Diagramms.</p>
+
+				</div>
+			
+		
+	</div>
+
+	<div class="member-content">
+
+		<div class="syntax-box">
+			<pre class="wrap-pre"><code>public abstract String ToSvg(Double maxWidth)</code></pre>
+		</div>		
+        
+		
+		
+			
+
+			
+
+			
+				<p class="member-box-title">Rückgabe</p>
+				<div class="member-doc-box">
+					<p>Die SVG-Repräsentation</p>
+
+				</div>
+			
+
+			
+
+			
+				<p class="member-box-title">Parameter</p>
+				<div class="member-doc-box markdown">
+					
+						<p>maxWidth</p>
+						<div class="inline">
+							<p>Falls das Diagramm breiter als der Wert ist, wird das Diagramm auf diesen Wert skaliert.</p>
+
+						</div>
+					
+				</div>
+			
+
+			
+
+			
+
+		
+
+		
+
+	</div>
+</div>
+
+
+				
+			
+
+			
+
+			<h3 class="box-title">Klassendiagramm</h3>
+			
+				<div id="sd-class-diagram" class="svgpan">
+					
+					<svg height="125.50" width="153.00"><g transform=""><rect height="121" width="152" x="0.55" y="0.55" fill="#FFFFFF" stroke="#979797" stroke-width="1" /><text x="32.26" y="20.50" fill="" style="" text-anchor="" font-family="" font-size="11.00" onmouseover="" onmouseout=""><![CDATA[public  interface]]></text><a xlink:href="../type/ISDDiagram.html" xmlns:xlink="xlink"><text x="33.50" y="40.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[ISDDiagram]]></text></a><path d="M0.5,55.50L153.00,55.50" stroke="#979797" stroke-width="1" /><image width="16.00" height="16.00" x="15.00" y="68.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/ISDDiagram.html#ToPng" xmlns:xlink="xlink"><text x="40.00" y="80.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[ToPng]]></text></a><image width="16.00" height="16.00" x="15.00" y="93.50" preserveAspectRatio="" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANtQTFRF/wD//vv+8tvyz4jP8OPw46zj8+Pz8NTw7r7u+q7765Hs8uDz9/Cr1dWsrLSuipmu/f394q/i+qv7+pj76ZDq9Ob0plCnu2+87qXv+pv7+pn75pjnkE6R6eWrwcSsrLWtmKSup0+o0W3S+p/77p3vllKXfC58qVKq0WrS1W/VvHC93ZjejkaPnDydfi5+5eKrzM6stbutnKeu5MrkqFCp0mvT027UfjB/nzyfjTWOfC196NHoqVCqy2fMlTiWeit78NXw7djtfzCAdSd169Hr7NLscSRy5szm////y4eOhgAAAAF0Uk5TAEDm2GYAAAABYktHREjwAtTqAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQY02NgwAMY0fhMzCxofFZmNiQ+OzMHJxczN5jNw8vHL8AsKCQsLMIsClchJi4hKSwlLQOUl+WVk1dgUFQSl1BWUVWDq1DX0NTS1tHVAxmhb2BoxGBsYmpmbmFphbDG2sZWz87eAcliRxMnZxcUp7m6uTOQAwDo6wrtzia2FQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMi0wNy0yOVQxMTo1MzowNiswMjowMARwUR4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMDQtMDNUMDU6MTE6MjArMDI6MDAQy5Z4AAAAAElFTkSuQmCC" xmlns:xlink="xlink" /><a xlink:href="../type/ISDDiagram.html#ToSvg" xmlns:xlink="xlink"><text x="40.00" y="105.50" fill="#1382CE" style="" text-anchor="" font-family="" font-size="14.00" onmouseover="this.setAttribute('fill', '#F58026')" onmouseout="this.setAttribute('fill', '#1382CE')"><![CDATA[ToSvg]]></text></a></g></svg>
+				</div>
+				<div class="legend"><p>Verschieben: Diagram halten und ziehen - Zoomen: Mausrad benutzen</p></div>
+			
+
+		</div>
+
+    </body>
+</html>
+

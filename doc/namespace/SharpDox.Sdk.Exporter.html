@@ -1,0 +1,140 @@
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox - SharpDox.Sdk.Exporter</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>        
+       
+	    <div id="dropdown-1" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+				
+					<li><a href="../type/IExporter.html"><img alt="Class-Icon" src="../assets/images/icons/Class_public.png"> IExporter</a></li>
+
+				
+			</ul>
+		</div>
+	   
+	    <div class="ui-layout-north">
+			<div class="toolbar">
+				<a href="#" data-dropdown="#dropdown-1" class="button"><img src="../assets/images/icons/Class_public.png"/> Typen <span class="info">(1)</span> <i class="icon-caret-down"></i></a>
+				<div class="right">
+					<span class="toolbar-info"> Assembly: SharpDox.Sdk</span>
+					<a href="#" id="print-button" class="button" title="Drucken"><i class="icon-print"></i></a>
+				</div>
+			</div>
+		</div>
+        
+		<div class="ui-layout-center">
+			
+				<h3 class="box-title first-heading">Beschreibung</h3>
+				
+				<div class="text-box markdown">
+					
+
+					<p>Der Exporter-Namensraum beinhaltet alle Interfaces um einen eigenen Exporter zu erstellen. Hier ein kleines Beispiel für den Aufbau eines Exporters:</p>
+
+<pre><code>using System;
+using SharpDox.Model.Repository;
+using SharpDox.Sdk.Exporter;
+using SharpDox.Sdk.Config;
+
+namespace ExampleExporter
+{
+    public class ExampleExporter : IExporter
+    {
+        public event Action&lt;string&gt; OnRequirementsWarning;
+        public event Action&lt;string&gt; OnStepMessage;
+        public event Action&lt;int&gt; OnStepProgress;
+
+        public bool CheckRequirements()
+        {
+            // Check for requirements
+        }
+
+        public void Export(SDRepository repository, string outputPath)
+        {
+            //Exportcode
+        }
+
+        public string ExporterName { get { return "example"; } }
+
+        public string Author { get { return "example"; } }
+
+        public string Description { get { return "example"; } }
+    }
+}
+</code></pre>
+
+<p>Ein ausführlicheres Beispiel ist <a href="../article/Erstellen_eines_Exporters.html">hier</a> zu finden.</p>
+
+				</div>
+				<h3 class="box-title">Typen</h3>
+
+			
+
+			<div class="table-box">
+				<table>
+					<thead>
+						<tr>
+							<td></td>
+							<td>Name</td>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>			
+
+						
+
+							<tr >
+								<td class="iconColumn">
+									<img alt="Class-Icon" src="../assets/images/icons/Class_public.png">
+								</td>
+								<td>
+									<a title="IExporter" href="../type/IExporter.html">IExporter</a>
+								</td>	
+								<td class="markdown">
+									
+										<p>Exportplugins müssen dieses Interface implementieren.</p>
+
+									
+								</td>
+							</tr>
+
+						
+
+					</tbody>
+				</table>
+			</div>
+
+			
+
+			
+		</div>
+	   
+    </body>
+</html>
+

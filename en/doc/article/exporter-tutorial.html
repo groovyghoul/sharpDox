@@ -1,0 +1,177 @@
+
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>      	
+		<div class="ui-layout-center">
+			<div class="text-box markdown no-margin">
+				
+
+				<p>This tutorial gives an overview about creating custom exporters for <strong>sharpDox</strong>. To accomplish this 
+task we will develop a plugin which creates own settings and an exporter to 
+create a csv output for each method in a solution.</p>
+
+<p>First of all create a library project in Visual Studio and reference the <em>SharpDox.Model</em> and 
+<em>SharpDox.Sdk</em>. In the first step we create the config 
+class. Create a class <em>CSVConfig.cs</em> with the following content:</p>
+
+<pre><code>using System;
+using System.ComponentModel;
+using SharpDox.Sdk.Config;
+using SharpDox.Sdk.Config.Attributes;
+
+namespace CSVExporter
+{
+    // The class implements the interface IConfigSection
+    // Set the group name for the propertygrid.
+    // Otherwise your configuration settings will not be shown!
+    // Use the property name of the string as the second parameter.
+    [Name(typeof(CSVStrings), "CSV")]
+    public class CSVConfig : IConfigSection
+    {
+        // The ConfigController will register on this event to get notified
+        // about any changes.
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // This is our new configitem
+        private string _divider = string.Empty;
+
+        // We define some attribute for the property grid
+        [Required]
+        [Name(typeof(CSVStrings), "Divider")]
+        public string Divider { get { return _divider; } set { _divider = value; OnPropertyChanged("Divider"); } }
+
+        // This guid identifies the configsection in 
+        // the config file.
+        public Guid Guid { get { return new Guid("463e2a9d-5d26-42ac-8a02-012928988c79"); } }
+    }
+}
+</code></pre>
+
+<p>In this plugin we only create a setting to define the divider for the csv file. Because of the given attributes
+<strong>sharpDox</strong> knows how to integrate the settings into the propertygrid.</p>
+
+<p>The last step is to create the csv exporter. Create a new class <em>CSVExport.cs</em> with the following content:</p>
+
+<pre><code>using System;
+using System.IO;
+using System.Linq;
+using SharpDox.Model.Repository;
+using SharpDox.Sdk.Exporter;
+
+namespace CSVExporter
+{
+    public class CSVExport : IExporter
+    {
+        /// &lt;summary&gt;
+        /// sharpDox listens on this event to get any warnings.
+        /// All messages will be shown in the build window.
+        /// &lt;/summary&gt;
+        public event Action&lt;string&gt; OnRequirementsWarning;
+
+        /// &lt;summary&gt;
+        /// sharpDox listens on this event to get any status
+        /// messages. All messages will be shown in the progressbar.
+        /// &lt;/summary&gt;
+        public event Action&lt;string&gt; OnStepMessage;
+
+        /// &lt;summary&gt;
+        /// sharpDox listens on this event to get any status update.
+        /// This event will move forward the secondary progressbar.
+        /// &lt;/summary&gt;
+        public event Action&lt;int&gt; OnStepProgress;
+
+        private readonly CSVConfig _csvConfig;
+
+        public CSVExport(CSVConfig csvConfig)
+        {
+            // Get our new configuration
+            _csvConfig = csvConfig;
+        }
+
+        // This function just returns true. No requirements to check for.
+        public bool CheckRequirements()
+        {
+            return true;
+        }
+
+        // The export function gets the parsed solution and the output path.
+        public void Export(SDRepository repository, string outputPath)
+        {
+            var csv = string.Empty;
+            var types = repository.GetAllTypes().OfType&lt;SDType&gt;().Where(o =&gt; !o.IsProjectStranger);
+
+            foreach (var type in types)
+            {
+                ExecuteOnStepMessage("Creating entry for " + type.Fullname);
+                csv += string.Format("{1}{0}{2}{0}{3}", _csvConfig.Divider, type.Fullname, type.Name, type.Namespace) + System.Environment.NewLine;
+            }
+
+            File.WriteAllText(Path.Combine(outputPath, "methods.csv"), csv);
+        }
+
+        private void ExecuteOnStepMessage(string message)
+        {
+            var handler = OnStepMessage;
+            if (handler != null)
+            {
+                handler(message);
+            }
+        }
+
+        private void ExecuteOnStepProgress(int progress)
+        {
+            var handler = OnStepProgress;
+            if (handler != null)
+            {
+                handler(progress);
+            }
+        }
+
+        // The name of the exporter will be used to 
+        // create a subdirectory in the output path.
+        public string ExporterName { get { return "CSV"; } }
+    }
+}
+</code></pre>
+
+<p>This is the complete, simple plugin for <strong>sharpDox</strong>. Just copy the created dll file into the 
+<em>plugin</em> folder of <strong>sharpDox</strong>. This way <strong>sharpDox</strong> knows about the plugin and will register 
+it at the start. Please download the example on this site <a href="https://github.com/Geaz/SharpDox.Examples.Plugins.CVS" title="CSV-Exporter">here</a>.</p>
+
+			</div>
+		</div> 
+    </body>
+</html>
+

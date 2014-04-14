@@ -1,0 +1,186 @@
+
+
+
+
+
+
+
+
+
+
+ 
+
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>sharpDox</title>
+        <meta name="viewport" content="width=device-width">
+
+		
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+			<script src="../assets/js/vendor.js"></script>
+			<script src="../assets/js/frame.js"></script>
+		
+
+    </head>
+    <body>      	
+		<div class="ui-layout-center">
+			<div class="text-box markdown no-margin">
+				
+
+				<p>Dieses Tutorial soll einen Überblick darüber geben, wie einfach neue Plugins für <strong>sharpDox</strong> 
+erstellt werden können. Dafür wird ein Plugin erstellt, welches eine neue Einstellung registriert
+und einen CSV Export für alle Methoden erstellt.</p>
+
+<p>Dazu wird zunächst ein neues Klassenbiliotheks-Projekt in Visual Studio angelegt. Benötigt 
+werden Verweise auf <em>SharpDox.Model</em> und <em>SharpDox.Sdk</em>. 
+Der erste Schritt ist die Erstellung der Konfigurationsklasse. Dazu wird eine neue Klasse 
+<em>CSVConfig.cs</em> mit folgendem Inhalt angelegt:</p>
+
+<pre><code>using System;
+using System.ComponentModel;
+using SharpDox.Sdk.Config;
+using SharpDox.Sdk.Config.Attributes;
+
+// Diese Klasse implementiert das IConfigSection Interface.
+// Mit dem Name-Attribute der Klasse wird der Gruppenname innerhalb der GUI gestetzt.
+// Dieser muss angegeben werden, da die Konfiguration ansonsten nicht angezeigt wird!
+// Der zweite Parameter des Attributs gibt den Namen der String-Property innerhalb des Typen
+// CSVStrings an.
+[Name(typeof(CSVStrings), "CSV")]
+namespace CSVExporter
+{
+    // Die Klasse implementiert das Interface IConfigSection
+    public class CSVConfig : IConfigSection
+    {
+        // An diesem Event registriert sich der ConfigController und sollte
+        // bei der Änderungen einer Einstellung aufgerufen werden. Damit
+        // wird der ConfigController über die Änderung informiert.
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // Die ist die eigentliche Einstellung.
+        private string _divider = string.Empty;
+
+        // Ein paar Attribute für das Propertygrid der GUI
+        [Required]
+        [Name(typeof(CSVStrings), "Divider")]
+        public string Divider { get { return _divider; } set { _divider = value; OnPropertyChanged("Divider"); } }
+
+        // Hier muss eine GUID eingefügt werden.
+        // GUIDs können z.B. auf www.guidgen.com generiert werden.
+        // Diese wird genutzt, um die Einstellungen in der 
+        // gespeicherten .sharpDox Konfiguration zu identifizieren.
+        public Guid Guid { get { return new Guid("463e2a9d-5d26-42ac-8a02-012928988c79"); } }
+    }
+}
+</code></pre>
+
+<p>In diesem Beispiel wird lediglich eine Einstellung zur Angabe des Trennzeichens hinzugefügt. 
+Durch die Angaben der Attribute wird die Konfiguration automatisch im Propertygrid der GUI angezeigt und
+in der Konfigurationsdatei von <strong>sharpDox</strong> integriert.</p>
+
+<p>Der letzte Schritt zur Erstellung des CSV Exporters ist der Exportvorgang selbst. Dazu wird eine 
+Datei <em>CSVExport.cs</em> mit folgendem Inhalt erstellt:</p>
+
+<pre><code>using System;
+using System.IO;
+using System.Linq;
+using SharpDox.Model.Repository;
+using SharpDox.Sdk.Exporter;
+
+namespace CSVExporter
+{
+    public class CSVExport : IExporter
+    {
+        /// &lt;summary&gt;
+        /// An diesem Event lauscht sharpDox, um über Warnungen während
+        /// der Überprüfung der Vorraussetzungen benachrichtigt zu werden.
+        /// Sollte eine Warnung auftreten, wird der Bauvorgang abgebrochen.
+        public event Action&lt;string&gt; OnRequirementsWarning;
+
+        /// &lt;summary&gt;
+        /// An diesem Event lauscht sharpDox, um über Statusnachrichten
+        /// beachrichtigt zu werden. Die Nachrichten werden im 
+        /// Fortschrittsbalken angezeigt.
+        /// &lt;/summary&gt;
+        public event Action&lt;string&gt; OnStepMessage;
+
+        /// &lt;summary&gt;
+        /// An diesem Event lauscht sharpDox, um über Statusaktualisierungen
+        /// beachrichtigt zu werden. Diese lassen den sekundären Fortschrittsbalken
+        /// fortschreiten.
+        /// &lt;/summary&gt;
+        public event Action&lt;int&gt; OnStepProgress;
+
+        private readonly CSVConfig _csvConfig;
+
+        public CSVExport(CSVConfig csvConfig)
+        {
+            // Holen unserer Konfiguration
+            _csvConfig = csvConfig;
+        }
+
+        // Die Export Funktion bekommt das eingelesene Projekt und 
+        // einen Ausgabepfad übergeben. Nun kann mit den Entitäten im Repository
+        // verfahren werden wie es gewünscht ist. In diesem Fall wird für jeden 
+        // nicht projektfremden Typen ein Eintrag in einer CSV Datei erstellt.
+        // Diese wird dann im Ausgabepfad gespeichert.
+        public void Export(SDRepository repository, string outputPath)
+        {
+            var csv = string.Empty;
+            var types = repository.GetAllTypes().OfType&lt;SDType&gt;().Where(o =&gt; !o.IsProjectStranger);
+
+            foreach (var type in types)
+            {
+                ExecuteOnStepMessage("Erstelle Eintrag für " + type.Fullname);
+                csv += string.Format("{1}{0}{2}{0}{3}", _csvConfig.Divider, type.Fullname, type.Name, type.Namespace) + System.Environment.NewLine;
+            }
+
+            File.WriteAllText(Path.Combine(outputPath, "methods.csv"), csv);
+        }
+
+        private void ExecuteOnStepMessage(string message)
+        {
+            var handler = OnStepMessage;
+            if (handler != null)
+            {
+                handler(message);
+            }
+        }
+
+        private void ExecuteOnStepProgress(int progress)
+        {
+            var handler = OnStepProgress;
+            if (handler != null)
+            {
+                handler(progress);
+            }
+        }
+
+        // Der Name wird des Exporter wird als Unterordner im Ausgabepfad erzeugt.
+        // Der komplette Ausgabepfad wird der Export-Funktion übergeben.
+        public string ExporterName { get { return "csv"; } }
+    }
+}
+</code></pre>
+
+<p>Damit wäre ein komplettes, rudimentäres Plugin für <strong>sharpDox</strong> fertiggestellt. Die resultierende 
+DLL-Datei wird anschließend einfach in den <em>plugin</em> Ordner von <strong>sharpDox</strong> kopiert. 
+Damit wird das Plugin beim Start registriert. Das Beispiel auf dieser Seite kann 
+<a href="https://github.com/Geaz/SharpDox.Examples.Plugins.CVS" title="CSV-Exporter">hier</a> heruntergeladen werden.</p>
+
+			</div>
+		</div> 
+    </body>
+</html>
+
